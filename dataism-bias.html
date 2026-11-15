@@ -1,0 +1,409 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>데이터 맹신 — 숫자로 보이면 왜 더 정확하다고 믿게 될까 | Re:Site 현대사회 개념지도</title><meta name="description" content="데이터가 많고 정확해 보여도 그 숫자가 현실 전부를 말해 주지는 않습니다. 데이터주의, 구글 독감 예측, 의료 알고리즘 사례를 통해 측정과 판단의 한계를 읽습니다."><link rel="canonical" href="https://4th-season.com/dataism-bias"><meta property="og:type" content="article"><meta property="og:title" content="데이터 맹신 — 숫자로 보이면 왜 더 정확하다고 믿게 될까"><meta property="og:description" content="데이터가 많고 정확해 보여도 그 숫자가 현실 전부를 말해 주지는 않습니다. 데이터주의, 구글 독감 예측, 의료 알고리즘 사례를 통해 측정과 판단의 한계를 읽습니다."><meta property="og:url" content="https://4th-season.com/dataism-bias"><meta property="og:image" content="https://4th-season.com/assets/resite/dataism-bias-cover.webp"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "데이터 맹신 — 숫자로 보이면 왜 더 정확하다고 믿게 될까", "description": "데이터가 많고 정확해 보여도 그 숫자가 현실 전부를 말해 주지는 않습니다. 데이터주의, 구글 독감 예측, 의료 알고리즘 사례를 통해 측정과 판단의 한계를 읽습니다.", "image": ["https://4th-season.com/assets/resite/dataism-bias-cover.webp"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://4th-season.com/dataism-bias"}, "datePublished": "2026-10-24", "dateModified": "2026-10-24", "inLanguage": "ko-KR", "author": {"@type": "Organization", "name": "4th Season / Re:Site"}}</script><style>
+:root{--navy:#17324D;--midnight:#1F3B5B;--cobalt:#315F8C;--slate:#6E8FAF;--ice:#EEF4F9;--mist:#F7FAFC;--ink:#1F2D3A;--line:#D8E4EE}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:17px/1.84 system-ui,"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);background:#fff;word-break:keep-all}a{color:var(--cobalt);text-underline-offset:3px}.wrap{width:min(980px,calc(100% - 40px));margin:auto}.top{border-bottom:1px solid var(--line);padding:17px 0}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{font-weight:850;color:var(--navy);font-size:18px}.crumb{display:flex;gap:11px;font-size:14px;flex-wrap:wrap}.cover{background:linear-gradient(120deg,#17324d,#1f3b5b);border-radius:22px;margin:35px 0 25px;padding:43px 47px;color:white}.label{font-size:13px;display:inline-block;border:1px solid #ffffff6b;border-radius:25px;padding:5px 12px}.cover h1{font-size:clamp(30px,4.7vw,46px);line-height:1.33;letter-spacing:-.03em;margin:18px 0}.lead{color:#e0edf6;font-size:18px}.pub{color:#bcd3e9;font-size:14px;margin-top:20px}.hero img{width:100%;height:auto;display:block;border-radius:18px;border:1px solid var(--line)}.article-nav{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0 55px}.article-nav a{border:1px solid var(--line);border-radius:12px;padding:10px 16px;background:var(--mist);font-size:15px}.section{margin:0 0 60px}.section h2,.references h2{font-size:28px;line-height:1.42;color:var(--navy);letter-spacing:-.025em;border-bottom:3px solid var(--ice);padding-bottom:13px;margin:0 0 26px}.section p{margin:19px 0}.section strong,.section b{color:var(--navy)}.table-scroll{overflow-x:auto;margin:27px 0}.section table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.6;min-width:650px}.section th,.section td{border:1px solid var(--line);padding:13px;text-align:left;vertical-align:top}.section th{background:var(--ice);color:var(--navy)}.section tr:nth-child(even) td{background:#fbfdff}.diagram{display:flex;align-items:stretch;gap:7px;margin:31px 0}.diagram>div{flex:1;background:var(--ice);border:1px solid var(--line);border-radius:12px;padding:13px 9px;text-align:center}.diagram b{display:block;color:var(--navy)}.diagram small{display:block;font-size:13px;line-height:1.55}.diagram span{align-self:center;color:var(--cobalt);font-weight:800}.finish{background:linear-gradient(120deg,#17324d,#284a6c);border-radius:18px;color:white;padding:26px 29px;margin:32px 0}.finish strong{font-size:19px;color:#fff}.finish p{color:#d9e8f4}.references{margin:60px 0;background:var(--mist);padding:30px;border-radius:18px}.references li{margin-bottom:13px;overflow-wrap:anywhere}.references span{color:#526981;font-size:15px}.disclaimer{color:#526981;font-size:14px}.foot{border-top:1px solid var(--line);padding:23px 0 45px;color:#71869b;font-size:14px}.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:25px 0}.compare div{border:1px solid var(--line);border-radius:14px;background:var(--mist);padding:22px;text-align:center}.compare span,.compare small{display:block;color:#536b82}.compare strong{display:block;font-size:32px;color:var(--navy)}@media(max-width:750px){.cover{padding:28px 23px}.section h2{font-size:23px}.diagram{display:grid;grid-template-columns:1fr 1fr}.diagram>span{display:none}.references{padding:20px}.compare{grid-template-columns:1fr}}
+.section blockquote {margin:27px 0;border-left:4px solid #315F8C;padding:16px 20px;background:#EEF4F9;border-radius:0 12px 12px 0}
+.section table {min-width:650px}
+.diagram {flex-wrap:wrap}
+.diagram>span {font-size:18px;align-self:center}
+.references {overflow-wrap:anywhere}
+.references a {color:#315F8C}
+@media(max-width:700px){.diagram{display:flex;flex-direction:column}.diagram>span{display:none}.diagram>div{min-width:100%}}
+
+.diagram {flex-wrap:wrap}.section blockquote {background:#EEF4F9;padding:14px 22px;border-left:4px solid #315F8C} .references a {overflow-wrap:anywhere;}@media(max-width:700px){.diagram{display:flex;flex-direction:column}.diagram>span{display:none}.diagram>div{width:100%}}</style><link id="s4-article-nav-css" rel="stylesheet" href="/assets/common/article-nav.css?v=20260928v1">
+<link id="s4-stdict-search-css" rel="stylesheet" href="/assets/common/stdict-search.css?v=20260927v1">
+</head><body>
+<div id="s4-stdict-search" class="s4-dict-search" data-endpoint="/api/stdict" aria-label="표준국어대사전 검색">
+<form class="s4-dict-form" role="search" autocomplete="off">
+<span class="s4-dict-badge">사전</span>
+<label class="s4-dict-sr" for="s4-dict-input">표준국어대사전 검색어</label>
+<input id="s4-dict-input" class="s4-dict-input" type="search" inputmode="search" maxlength="80" placeholder="표준국어대사전" aria-label="표준국어대사전 검색">
+<button class="s4-dict-submit" type="submit" aria-label="사전 검색">⌕</button>
+</form>
+<div class="s4-dict-panel" hidden aria-live="polite"></div>
+</div>
+<nav id="fs-common-menu" class="fs-common-menu" data-sitejob-marker="GLOBAL_ARTICLE_NAV_V2" aria-label="개별 글 공통 메뉴"><div class="fsn-inner"><a class="fsn-exit" href="/world/resite/social-phenomena/">← 상위 지도</a><a class="fsn-brand" href="/">4TH SEASON</a><a class="fsn-domain" href="/learn/">LEARN</a><a class="fsn-domain" href="/world/">WORLD</a><a class="fsn-domain" href="/life/">LIFE</a><a class="fsn-domain insite" href="/insite/">In:Site</a><a class="fsn-series" href="/world/resite/">Re:Site</a><a class="fsn-map" href="/sitemap/">한눈에 보기</a></div></nav><!-- RESITE-RS096-DATAISM-BIAS-V1-20261024-001 --><header class="top"><div class="wrap"><span class="brand">4번째 계절 · Re:Site</span><nav class="crumb"><a href="/world/resite/">현대사회 개념지도</a><span>›</span><a href="/world/resite/social-phenomena/">사회현상</a></nav></div></header><main class="wrap"><section class="cover"><span class="label">Re:Site · 사회현상 · 데이터와 판단</span><h1>데이터 맹신 — 숫자로 보이면 왜 더 정확하다고 믿게 될까</h1><p class="lead">학교 운영회의에서 한 교사가 말합니다. “이 반은 지난달 만족도가 96점입니다. 개선할 필요가 없겠네요.” 누군가는 설문에 답하지 않은 학생, 말없이 퇴원한 학생, 만족도에는 담기지 않는 피로와 불안을 떠올립니다. 차트를 만드는 일은 어렵지 않습니다. 어려운 일은 차트가 보여 주지 않는 것을 함께 판단하는 일입니다. 숫자는 현실을 정리하는 중요한 도구지만, 숫자가 현실의 전부인 것처럼 다루는 순간 판단이 어긋날 수 있습니다.</p><div class="pub">최초 발행 <time datetime="2026-10-24">2026.10.24</time></div></section><figure class="hero"><img src="/assets/resite/dataism-bias-cover.webp" width="1200" height="675" loading="eager" alt="거대한 데이터 대시보드와 데이터가 포착하지 못하는 다채로운 사람들의 현실을 나란히 보여 주는 장면"></figure><nav class="article-nav"><a href="/world/resite/">현대사회 개념지도</a><a href="/world/resite/social-phenomena/">사회현상</a><a href="/data-divide">함께 읽기: 데이터 격차</a><a href="/sampling-bias">함께 읽기: 표본 편향</a><a href="/model-bias">함께 읽기: 모델 편향</a><a href="/goodharts-law">함께 읽기: 굿하트의 법칙</a></nav><section class="section" id="section-1"><h2>숫자가 회의의 마지막 말이 되는 순간</h2>
+<p>성과 보고회에는 색색의 막대그래프가 등장합니다. 담당자는 앱 이용자가 30% 늘었고, 상담 처리 시간이 20% 줄었으며, 고객 만족도는 4.7점이라고 설명합니다. 모두 의미 있는 변화일 수 있습니다. 문제는 그 수치가 <em>어떤 사람에게, 무엇이, 왜 달라졌는가</em>라는 질문에 자동으로 답하지 않는다는 점입니다. 앱 가입자가 늘었다는 사실은 서비스를 포기한 사람의 이유를 알려 주지 않습니다. 평균 상담 시간이 짧아져도, 복잡한 문의를 끝까지 해결했는지는 별도로 확인해야 합니다.</p>
+<p>예를 들어 상담센터가 처리 시간 단축을 목표로 한다고 합시다. 단순 문의를 빠르게 종결해도 평균 시간은 낮아집니다. 하지만 어려운 민원을 다른 부서로 넘긴다면 고객의 실제 문제는 그대로 남을 수 있습니다. 반대로 시간이 오래 걸린 상담이 오히려 재방문을 막을 수도 있습니다. 수치가 틀렸다는 뜻이 아닙니다. <strong>정확한 숫자도 질문과 맞지 않으면 부정확한 판단을 낳을 수 있다</strong>는 뜻입니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>보고서에 적힌 수치</th>
+<th>직접 관찰한 것</th>
+<th>그 수치만으로는 모르는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>가입자 증가 30%</td>
+<td>등록 건수의 변화</td>
+<td>실제 지속 이용, 혜택의 분포</td>
+</tr>
+<tr>
+<td>평균 처리 시간 20% 감소</td>
+<td>업무 시간의 변화</td>
+<td>문제 해결률, 재문의 여부</td>
+</tr>
+<tr>
+<td>만족도 4.7/5</td>
+<td>응답자의 평가</td>
+<td>무응답자의 경험, 탈락자 의견</td>
+</tr>
+<tr>
+<td>성적 평균 8점 상승</td>
+<td>특정 시험 점수의 변화</td>
+<td>난이도·선발 차이, 장기 학습 성과</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 표에서 왼쪽 열은 결코 쓸모없는 숫자가 아닙니다. 오히려 현상을 살필 때 꼭 필요한 출발점입니다. 다만 출발점이 결론으로 둔갑하면 수치의 신뢰도가 과대평가됩니다. 이미 알고 있는 평균을 반복하는 대신, 누가 빠졌는지와 다른 근거가 있는지를 묻는 태도가 필요합니다.</p>
+</section><section class="section" id="section-2"><h2>데이터 맹신은 무엇이며, 데이터주의와 어떻게 다른가</h2>
+<p>‘데이터 맹신’은 모든 의사결정을 숫자에 맡기는 행동 하나를 가리키는 엄밀한 심리학 진단명은 아닙니다. 여기서는 <strong>데이터로 기록됐다는 이유만으로 그 정보가 더 객관적이고 완전하며 중립적이라고 믿는 판단 경향</strong>을 설명하는 편집상 개념으로 사용합니다. 영문 작업명인 <em>Dataism Bias</em> 역시 독립적으로 확립된 실험 심리학 편향의 표준 명칭이라고 주장하지 않습니다.</p>
+<p>호세 판 데이크(José van Dijck)는 2014년 논문에서 데이터화(datafication), 데이터주의(dataism), 데이터 감시(dataveillance)를 구별했습니다. 데이터화는 활동과 관계를 수집·분석할 수 있는 데이터 형태로 바꾸는 사회기술적 과정이고, 데이터주의는 데이터와 플랫폼에 대한 신뢰가 마치 당연한 믿음처럼 확산되는 경향을 비판적으로 설명하는 말입니다. 데이터 감시는 그 과정에서 사람의 정보가 추적되고 관리되는 문제를 가리킵니다. 이 셋을 하나의 ‘숫자 중독’으로 뭉뚱그리면 연구의 논점이 사라집니다. <a href="https://doi.org/10.24908/ss.v12i2.4776" rel="noopener noreferrer" target="_blank">van Dijck, 2014</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>묻는 질문</th>
+<th>핵심 위험</th>
+<th>필요한 점검</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>데이터화</td>
+<td>무엇이 기록 가능한 사건으로 바뀌는가</td>
+<td>기록 불가능한 경험의 배제</td>
+<td>측정 대상과 맥락 점검</td>
+</tr>
+<tr>
+<td>데이터주의</td>
+<td>왜 기록된 정보에 권위를 부여하는가</td>
+<td>데이터가 자동으로 진실이라는 믿음</td>
+<td>가정·해석·대안 증거 공개</td>
+</tr>
+<tr>
+<td>데이터 감시</td>
+<td>누가 데이터를 모으고 결합하는가</td>
+<td>추적·통제·사생활 침해</td>
+<td>목적 제한과 권리 보호</td>
+</tr>
+<tr>
+<td>데이터 맹신</td>
+<td>숫자를 근거로 판단을 어디까지 확대하는가</td>
+<td>지표와 현실을 동일시</td>
+<td>질문·대리지표·누락 확인</td>
+</tr>
+</tbody>
+</table></div>
+<p>‘숫자를 믿지 말자’는 주장은 데이터 맹신을 비판하는 글의 결론이 아닙니다. 통계적 분석은 감으로 내린 판단을 교정하고, 차별과 위험을 드러내는 데도 도움이 됩니다. 중요한 차이는 <strong>검증 가능한 근거로 사용하는가</strong>, 아니면 <strong>반론을 끝내는 최종 권위로 사용하는가</strong>입니다.</p>
+</section><section class="section" id="section-3"><h2>데이터는 발견되기만 하는 것이 아니라 만들어진다</h2>
+<p>우리가 보는 데이터는 현실을 그대로 떠낸 사진이 아닙니다. 어떤 현상에 이름을 붙이고, 측정 단위를 정하고, 수집 대상을 고른 뒤, 누락값을 처리하고, 화면에 표시하는 일련의 선택이 지나간 결과입니다. 설문에서 ‘만족’을 1~5점으로 물을지, 자유롭게 서술하도록 할지에 따라 보이는 현실이 달라집니다. 민원 건수를 셀 때 반복 신고를 한 건으로 볼지 여러 건으로 볼지도 중요합니다. 수집한 사실을 표현하는 방식이 통계적 결론의 일부가 됩니다.</p>
+<div class="diagram"><div><strong>현실의 사건</strong><small>말·행동·상황</small></div><span>→</span><div><strong>측정 규칙</strong><small>무엇을 셀 것인가</small></div><span>→</span><div><strong>기록·정제</strong><small>누가 빠졌는가</small></div><span>→</span><div><strong>모형·표시</strong><small>무엇을 강조하는가</small></div><span>→</span><div><strong>판단</strong><small>누가 책임지는가</small></div></div>
+<p>데이나 보이드와 케이트 크로퍼드는 2012년 빅데이터를 둘러싼 여러 전제를 비판적으로 검토하며, 대규모 데이터가 편향 없는 관점을 보장한다는 믿음을 경계했습니다. 수집 규모의 확대가 표본의 구성, 데이터 접근 권한, 맥락 해석의 문제를 사라지게 만드는 것은 아닙니다. 특히 플랫폼이 제공한 데이터는 서비스 이용자의 행동 기록이지, 사회 전체의 행동을 그대로 복사한 표본이 아닐 수 있습니다. <a href="https://www.microsoft.com/en-us/research/publication/critical-questions-for-big-data-provocations-for-a-cultural/" rel="noopener noreferrer" target="_blank">boyd &amp; Crawford, 2012</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>분석 단계</th>
+<th>겉보기의 중립성</th>
+<th>실제로 결정되는 선택</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>질문 만들기</td>
+<td>‘성과’를 측정한다</td>
+<td>무엇을 성과라고 부를 것인가</td>
+</tr>
+<tr>
+<td>표본 정하기</td>
+<td>이용 기록을 전수 분석한다</td>
+<td>비이용자·탈락자를 제외하는가</td>
+</tr>
+<tr>
+<td>변수 만들기</td>
+<td>객관적인 점수를 사용한다</td>
+<td>어떤 현실을 점수로 대신하는가</td>
+</tr>
+<tr>
+<td>처리하기</td>
+<td>결측값을 보정한다</td>
+<td>빠진 값이 무작위라고 가정하는가</td>
+</tr>
+<tr>
+<td>시각화하기</td>
+<td>추세선을 보여 준다</td>
+<td>기준선·기간·집단을 어떻게 정하는가</td>
+</tr>
+<tr>
+<td>활용하기</td>
+<td>높은 점수에 자원을 준다</td>
+<td>점수가 낮은 사람의 이의제기는 가능한가</td>
+</tr>
+</tbody>
+</table></div>
+<p>그래서 데이터의 ‘원본’만 있다고 해서 원래 현실이 복원되는 것은 아닙니다. 측정 규칙과 선택의 흔적을 기록해야 나중에 숫자의 의미를 다시 살펴볼 수 있습니다.</p>
+</section><section class="section" id="section-4"><h2>구글 독감 예측은 데이터가 많아도 틀릴 수 있음을 어떻게 보여 줬나</h2>
+<p>한때 구글 검색량은 독감 유행을 빠르게 파악할 수 있는 혁신적인 단서로 주목받았습니다. 사람들은 병원에 가기 전에도 증상과 약을 검색하므로 검색 기록에 건강 변화의 신호가 담길 수 있다는 생각입니다. 실제로 검색 행동에는 유용한 단서가 있습니다. 하지만 그것이 바로 독감 환자의 규모라는 뜻은 아닙니다. 독감 뉴스가 집중 보도되거나 플랫폼의 검색 방식이 바뀌면 검색 행동도 달라질 수 있기 때문입니다.</p>
+<p>데이비드 레이저와 동료들은 2014년 《Science》에서 구글 독감 트렌드(Google Flu Trends)의 문제를 분석했습니다. 연구진은 2013년 2월 당시 GFT가 미국 질병통제예방센터(CDC)가 보고한 독감 유사 증상 진료 비중을 <strong>두 배 넘게</strong> 추정했다는 점을 되짚었습니다. 이것은 ‘환자 수를 언제나 두 배 틀렸다’는 일반 법칙이 아니라 특정 시기·지표에서 나타난 중요한 예측 실패 사례입니다. <a href="https://gking.harvard.edu/publication/the-parable-of-google-flu-traps-in-big-data-analysis/" rel="noopener noreferrer" target="_blank">Lazer et al., 2014</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>관찰된 자료</th>
+<th>알고 싶었던 현실</th>
+<th>둘이 어긋날 수 있는 이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>검색어 입력 빈도</td>
+<td>독감 유사 증상 진료 규모</td>
+<td>뉴스·관심도 변화로 검색이 증가</td>
+</tr>
+<tr>
+<td>과거 검색 패턴</td>
+<td>미래 유행</td>
+<td>계절성·플랫폼 변화로 관계가 이동</td>
+</tr>
+<tr>
+<td>높은 예측 적합도</td>
+<td>장기간 안정적 예측력</td>
+<td>학습 시기 밖에서 오차가 커질 가능성</td>
+</tr>
+<tr>
+<td>방대한 로그</td>
+<td>공중보건의 전체 상황</td>
+<td>검사·진료체계의 자료가 빠질 가능성</td>
+</tr>
+</tbody>
+</table></div>
+<p>여기서 잘못된 교훈은 ‘인터넷 검색 데이터는 쓸모없다’는 것입니다. 검색 자료를 공중보건 감시 자료와 결합하고, 주기적으로 바뀌는 관계를 검증하는 것은 여전히 가능한 접근입니다. 정확한 교훈은 <strong>관측된 디지털 흔적과 우리가 알고 싶은 현상 사이의 연결이 항상 일정하지 않다</strong>는 것입니다. 데이터가 커질수록 이 간극을 더 엄격하게 확인해야 합니다.</p>
+</section><section class="section" id="section-5"><h2>의료 알고리즘의 높은 정확도는 누구의 필요를 놓쳤나</h2>
+<p>숫자에 대한 신뢰가 문제가 되는 더 어려운 순간은 지표가 사람에게 실제 불이익을 주는 의사결정에 들어갈 때입니다. 미국 의료기관에서 사용된 한 위험도 분류 알고리즘은 건강 위험이 높은 사람을 추가 관리 대상으로 찾아내는 데 쓰였습니다. 연구자 지아드 오버마이어와 동료들은 2019년 해당 알고리즘이 비슷한 위험 점수를 받은 흑인 환자와 백인 환자의 실제 건강 상태를 동등하게 반영하지 못한다고 분석했습니다.</p>
+<p>핵심은 악의적인 숫자를 집어넣었다는 단순한 이야기가 아닙니다. 알고리즘이 예측하도록 설계된 목표가 <strong>건강상 필요</strong>가 아니라 <strong>의료비 지출</strong>이었다는 점입니다. 기존 의료 접근 격차 때문에 비슷하게 아픈 사람끼리도 지출액이 달랐고, 비용 예측을 건강 필요의 대리값으로 쓰자 건강 위험 판단에 구조적 불평등이 스며들었습니다. 논문에서는 편향을 교정하면 추가 관리가 필요한 흑인 환자 중 해당 프로그램의 도움을 받는 비율이 17.7%에서 46.5%로 높아질 수 있다고 추정했습니다. 이는 ‘치료 성공률이 17.7%에서 46.5%로 올랐다’는 뜻이 아닙니다. <a href="https://pubmed.ncbi.nlm.nih.gov/31649194/" rel="noopener noreferrer" target="_blank">Obermeyer et al., 2019</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>모형이 예측한 것</th>
+<th>결정에 필요했던 것</th>
+<th>생긴 문제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>장래 의료 지출</td>
+<td>추가 치료·관리 필요 정도</td>
+<td>지출 접근성이 다른 집단을 과소평가</td>
+</tr>
+<tr>
+<td>과거 사용량</td>
+<td>실질적 건강 문제의 심각성</td>
+<td>이용하지 못한 필요가 기록되지 않음</td>
+</tr>
+<tr>
+<td>비용의 예측 정확도</td>
+<td>건강 필요의 형평성</td>
+<td>맞는 비용 예측이 잘못된 지원 배분으로 연결</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 사례는 분석 방법의 무용함을 보여 주지 않습니다. 오히려 모형을 분석 대상으로 삼아 실제 환자 상태와 비교했기 때문에 감춰진 오류를 찾아냈습니다. <strong>수학적 계산의 정확도와 판단 목적의 타당성은 다른 시험</strong>을 통과해야 한다는 사실을 보여 줍니다. 다른 나라의 모든 의료 AI가 동일한 편향을 가진다는 증거로 일반화할 수는 없습니다.</p>
+</section><section class="section" id="section-6"><h2>숫자가 정확해도 질문이 틀리면 결론은 달라진다</h2>
+<p>지역 공공도서관 두 곳을 평가한다고 가정해 봅시다. A도서관은 방문 1만 회, B도서관은 방문 6천 회를 기록했습니다. 방문 횟수만 보면 A가 우수하다고 판단하기 쉽습니다. 그러나 A는 대중교통이 편리한 번화가에 있고, B는 거주 인구가 적고 이동이 불편한 지역에 있습니다. 두 곳의 대상 주민 수와 서비스 목적이 다르면 같은 지표로 서열을 매기는 것은 별도의 정당화를 요구합니다.</p>
+<p>아래 수치는 원전이나 실제 지자체 통계가 아니라 <strong>측정 단위의 의미를 설명하기 위한 가상 예시</strong>입니다. 중복 방문을 따로 집계했고, 봉사 시간과 질적 만족도는 아직 비교하지 않았다고 가정합니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>교육용 가상자료</th>
+<th style="text-align:right">A도서관</th>
+<th style="text-align:right">B도서관</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>연간 방문 횟수</td>
+<td style="text-align:right">10,000회</td>
+<td style="text-align:right">6,000회</td>
+</tr>
+<tr>
+<td>주요 서비스 대상 주민</td>
+<td style="text-align:right">20,000명</td>
+<td style="text-align:right">5,000명</td>
+</tr>
+<tr>
+<td>주민 100명당 방문 횟수</td>
+<td style="text-align:right">50회</td>
+<td style="text-align:right">120회</td>
+</tr>
+<tr>
+<td>직접 방문이 어려운 주민 지원 여부</td>
+<td style="text-align:right">별도 조사 필요</td>
+<td style="text-align:right">별도 조사 필요</td>
+</tr>
+</tbody>
+</table></div>
+<p>단순 총방문은 A가 더 많지만, 주민 규모로 나눈 값은 B가 더 높습니다. 10,000÷20,000×100=50, 6,000÷5,000×100=120입니다. 그렇다고 B가 무조건 우수하다는 결론도 성급합니다. 누가 여러 번 방문했는지, 다른 서비스를 제공했는지, 주민이 무엇을 필요로 하는지를 아직 모르기 때문입니다. 분모를 바꾸는 일은 답을 조작하는 것이 아니라 <strong>질문을 바꾸는 일</strong>입니다. 그 변화가 정당한지는 평가 목적에 달려 있습니다.</p>
+<p>수치가 같아 보여도 ‘건수’, ‘사람 수’, ‘비율’, ‘접근성’은 서로 다른 현상입니다. 데이터 맹신을 줄이는 첫 실천은 숫자를 버리는 것이 아니라, <strong>그 숫자가 어느 질문의 답인지 문장으로 다시 쓰는 것</strong>입니다.</p>
+</section><section class="section" id="section-7"><h2>기록에서 빠진 사람은 평균에서도 보이지 않는다</h2>
+<p>기업이 자사 앱 사용자 10만 명의 활동을 분석했다고 합시다. 분석 대상이 10만 명이라는 사실은 충분히 큰 규모입니다. 그러나 앱에 가입하지 못한 사람, 도중에 사용을 포기한 사람, 오프라인 창구만 이용하는 사람의 경험은 그 이용 로그에 담기지 않습니다. 이용자의 행동을 완전히 파악해도 <strong>비이용자의 필요를 전수 파악한 것은 아닙니다</strong>. 이런 문제는 데이터의 크기보다 수집 과정에 의해 생깁니다.</p>
+<p>표본 편향은 수집된 사람이 전체 대상자를 대표하지 못할 가능성을, 데이터 격차는 데이터를 만들고 이용하고 그 혜택을 가져갈 기회의 불균형을 살핍니다. 데이터 맹신은 그렇게 만들어진 자료가 ‘이미 객관적으로 모두를 말해 준다’고 믿는 해석 태도에 초점을 둡니다. 세 문제는 연결되지만 같은 정의가 아닙니다. <a href="/sampling-bias">표본 편향</a>과 <a href="/data-divide">데이터 격차</a>를 함께 읽으면 차이가 더 분명해집니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>자료가 빠지는 과정</th>
+<th>겉으로 드러난 결과</th>
+<th>확인해야 할 근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>가입할 수 없는 이용자</td>
+<td>활동 로그가 없음</td>
+<td>접근 조건·기기·언어 장벽</td>
+</tr>
+<tr>
+<td>불만족자가 중도 이탈</td>
+<td>남은 이용자 만족도 상승</td>
+<td>탈락률·탈락 사유</td>
+</tr>
+<tr>
+<td>온라인 설문만 사용</td>
+<td>고령층 의견 축소 가능</td>
+<td>대상 모집단과 응답 경로</td>
+</tr>
+<tr>
+<td>기록·신고하지 못한 피해</td>
+<td>신고 건수가 낮음</td>
+<td>외부 조사·현장 관찰</td>
+</tr>
+</tbody>
+</table></div>
+<p>관찰 자료가 없는 영역을 임의 숫자로 메워서는 안 됩니다. 그 대신 얼마나 빠졌는지의 범위를 추정하고, 별도 채널에서 의견을 수집하고, 자료의 한계를 보고서에 드러내야 합니다. ‘모르는 부분이 있다’는 인정은 분석의 실패가 아니라 신뢰할 만한 분석의 조건입니다.</p>
+</section><section class="section" id="section-8"><h2>숫자가 목표가 되면 사람의 행동도 달라진다</h2>
+<p>평가와 보상이 수치에 연결되면 사람들은 그 기준에 맞춰 행동합니다. 응급실이 진료 시간만 평가받으면 간단한 환자를 먼저 처리할 유인이 생길 수 있습니다. 학교가 시험 평균만 평가받으면 난이도가 낮은 문제에 시간을 집중할 수도 있습니다. 어느 현장에서 이런 변화가 실제로 일어났다고 단정하는 것은 아닙니다. <strong>보상과 측정 지표가 결합될 때 가능한 반응 경로</strong>를 설명하는 가상 장면입니다.</p>
+<p>도널드 캠벨은 1976년 사회정책 평가를 논하며 사회 지표가 의사결정에 강하게 쓰일수록 왜곡·조작 압력을 받을 수 있다는 문제를 제기했습니다. 훗날 굿하트의 법칙이라는 표현으로도 널리 논의되는 지표의 역기능과 맞닿아 있습니다. 다만 데이터 맹신은 지표를 신뢰하는 태도이고, 지표가 목표가 되면서 행동을 바꾸는 현상은 <strong>유인 구조의 문제</strong>입니다. 혼용하지 않는 것이 좋습니다. <a href="https://eric.ed.gov/?id=ED303512" rel="noopener noreferrer" target="_blank">Campbell, 1976 원문 서지</a> · <a href="/goodharts-law">굿하트의 법칙</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>원래 목적</th>
+<th>관리 지표</th>
+<th>지표에만 몰두할 때 가능한 왜곡</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>건강을 돌보기</td>
+<td>평균 진료 시간</td>
+<td>어려운 상담 회피</td>
+</tr>
+<tr>
+<td>실제 학습 돕기</td>
+<td>시험 평균</td>
+<td>측정 쉬운 단원에 편중</td>
+</tr>
+<tr>
+<td>안전 강화</td>
+<td>신고 건수 감소</td>
+<td>신고 억제 유인</td>
+</tr>
+<tr>
+<td>상담 질 향상</td>
+<td>통화 종료 속도</td>
+<td>미해결 문의 이관</td>
+</tr>
+</tbody>
+</table></div>
+<p>지표를 폐기하기보다 여러 결과를 함께 보고, 조작하기 쉬운 기준에 보상이 과도하게 몰리지 않게 하고, 현장 담당자의 설명과 이의제기 절차를 마련하는 편이 건설적입니다. 숫자는 바람직한 행동을 유도할 수 있지만 잘 설계되지 않으면 측정할 수 있는 행동만 남게 할 수 있습니다.</p>
+</section><section class="section" id="section-9"><h2>AI의 점수와 99% 정확도는 무엇을 보증하는가</h2>
+<p>모형 화면에 ‘정확도 99%’라고 써 있으면 강한 신뢰가 생깁니다. 하지만 정확도가 무엇을 뜻하는지 먼저 알아야 합니다. 전체 1만 건 중 9,900건을 맞혔다는 주장과, 긴급한 소수 사례를 제대로 찾아냈다는 주장은 다릅니다. 분류 대상의 대부분이 정상인 상황에서는 모두 정상이라고 해도 높은 단순 정확도가 나올 수 있습니다. 그러므로 고위험 판단에서는 재현율, 정밀도, 집단별 오류, 교정도, 실제 피해를 별도로 살펴야 합니다.</p>
+<p><strong>교육용 가상 계산</strong>을 해 보겠습니다. 긴급 조치가 필요한 사례가 1,000건 가운데 10건뿐일 때 모든 사람을 ‘정상’으로 판정하는 모델은 990건을 맞힙니다. 전체 정확도는 990÷1,000=99%입니다. 하지만 필요한 조치 대상 10명 가운데 발견한 사람은 0명이므로 긴급 사례 재현율은 0÷10=0%입니다. 이 모델이 실제 어디에 적용됐다는 뜻이 아니고, 정확도 하나로 운영 적합성을 결론 내릴 수 없음을 보여 주는 계산입니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>가상 모형 평가</th>
+<th style="text-align:right">관측된 수치</th>
+<th>주의할 해석</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>전체 사례</td>
+<td style="text-align:right">1,000건</td>
+<td>평가 집합의 구성 확인 필요</td>
+</tr>
+<tr>
+<td>긴급 조치 필요</td>
+<td style="text-align:right">10건</td>
+<td>적은 비중도 중요할 수 있음</td>
+</tr>
+<tr>
+<td>전부 정상 판정 시 정확도</td>
+<td style="text-align:right">99%</td>
+<td>전체 사례의 압도적 다수만 맞힘</td>
+</tr>
+<tr>
+<td>전부 정상 판정 시 긴급 사례 재현율</td>
+<td style="text-align:right">0%</td>
+<td>반드시 찾아야 할 사례 전부 놓침</td>
+</tr>
+</tbody>
+</table></div>
+<p>앤드루 셀브스트와 동료들은 2019년 사회기술 시스템의 공정성을 계산 문제로만 추상화하면 제도·사람·행동 맥락을 놓칠 수 있다고 지적했습니다. NIST의 AI 위험관리 프레임워크도 신뢰 가능한 AI를 단순 정확도 하나로 정의하지 않고 맥락·안전·공정성·검증 가능성 등 폭넓은 문제를 다룹니다. 이 연구와 지침은 모든 AI 판단이 잘못됐다는 주장의 근거가 아니라, 적합한 검증 기준이 여러 층위에 걸쳐 있다는 근거입니다. <a href="https://doi.org/10.1145/3287560.3287598" rel="noopener noreferrer" target="_blank">Selbst et al., 2019</a> · <a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener noreferrer" target="_blank">NIST AI RMF</a></p>
+</section><section class="section" id="section-10"><h2>숫자와 경험이 충돌할 때 무엇부터 다시 확인할까</h2>
+<p>데이터가 사람들의 현장 경험과 맞지 않을 때 어느 쪽을 즉시 참이라고 결정할 수는 없습니다. 현장 경험에는 기억 오류와 선택적인 관찰이 있을 수 있고, 수치에는 측정 설계의 오류가 있을 수 있습니다. <strong>분쟁을 해결하는 기준은 숫자 대 감정의 대결이 아니라 두 근거를 서로 검증 가능한 질문으로 바꾸는 일</strong>이어야 합니다. 숫자가 뒷받침하는 범위를 과장하지 않으면서 현장 진술도 검토 대상에서 제외하지 않는 것입니다.</p>
+<p>실무에서는 네 가지 층을 구분하는 것이 도움이 됩니다. 먼저 우리가 추구하는 가치·목표를 문장으로 씁니다. 다음에 그 목적을 대표할 지표가 무엇인지 정합니다. 세 번째로 자료의 수집과 결측·오차·집단별 결과를 검사합니다. 마지막으로 적용한 결정이 누구에게 어떤 결과를 낳았는지 사후 점검합니다. 이 가운데 어느 단계라도 생략하면 잘 정돈된 대시보드가 오히려 잘못된 확신을 강화할 수 있습니다.</p>
+<div class="diagram"><div><strong>목적</strong><small>무엇을 개선할까</small></div><span>→</span><div><strong>지표</strong><small>무엇을 대신 재나</small></div><span>→</span><div><strong>검증</strong><small>누락·오류·반례</small></div><span>→</span><div><strong>결정</strong><small>누가 책임지나</small></div><span>→</span><div><strong>사후 점검</strong><small>누구에게 무슨 결과인가</small></div></div>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>검토 질문</th>
+<th>필요한 기록</th>
+<th>위험 신호</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>우리가 알고 싶은 것은 무엇인가</td>
+<td>의사결정 목적</td>
+<td>지표 이름만 있고 목적 없음</td>
+</tr>
+<tr>
+<td>숫자는 어떤 방식으로 만들어졌는가</td>
+<td>수집·정제 과정</td>
+<td>표본 및 결측 설명 없음</td>
+</tr>
+<tr>
+<td>다른 집단에서 결과는 어떤가</td>
+<td>집단별 성능·피해</td>
+<td>평균만 제시</td>
+</tr>
+<tr>
+<td>관계를 원인으로 읽는가</td>
+<td>연구 설계·대조군</td>
+<td>상관만으로 정책 효과 주장</td>
+</tr>
+<tr>
+<td>반론과 수정은 가능한가</td>
+<td>이의제기·감사 절차</td>
+<td>‘AI가 결정했다’고 책임 회피</td>
+</tr>
+</tbody>
+</table></div>
+<p>팀닛 게브루와 동료들이 제안한 ‘Datasheets for Datasets’도 데이터셋의 수집 동기, 구성, 사용 범위, 한계를 문서화할 필요성을 강조합니다. 결과 숫자와 함께 <strong>그 숫자가 생산된 조건</strong>을 전달해야 다른 사람이 적절한 판단을 할 수 있다는 취지입니다. <a href="https://www.microsoft.com/en-us/research/publication/datasheets-for-datasets/" rel="noopener noreferrer" target="_blank">Gebru et al., 2021</a></p>
+</section><section class="section" id="section-11"><h2>데이터 맹신은 숫자를 믿는 것이 아니라 숫자 밖의 질문을 닫는 것이다</h2>
+<p>처음 장면의 만족도 96점을 다시 봅시다. 그것은 제대로 설계된 조사라면 분명 읽을 가치가 있는 근거입니다. 그러나 96점이 ‘모든 학생이 만족한다’는 뜻이 되려면 응답자 구성과 질문 내용, 응답하지 않은 사람의 사정, 조사 시점, 실제 서비스의 결과까지 검토해야 합니다. 다음 회의에서 반드시 점수를 버릴 필요는 없습니다. “이 점수는 무엇을 보여 주고, 무엇은 보여 주지 않는가”라는 한 문장만 추가해도 판단의 질은 달라질 수 있습니다.</p>
+<p>데이터는 인간의 편견을 교정하기도 하고 새로운 편향을 드러내기도 합니다. 문제는 계산이 있다는 사실이 아니라 계산된 결과에 사회적 의미와 책임을 부여하는 과정입니다. 같은 숫자를 보고도 누구를 지원할지, 무엇을 개선할지, 어떤 위험을 감수할지는 사람이 정한 목적과 제도적 기준에 달려 있습니다. 데이터가 많은 시대일수록 데이터에 반대하는 태도보다 <strong>데이터를 끝까지 질문하는 태도</strong>가 더 중요합니다.</p>
+<p>데이터 맹신은 숫자 자체에 대한 믿음이 아니라, <strong>측정된 것과 현실 전체를 구분하지 않은 채 숫자가 질문과 책임을 대신하도록 내버려 두는 판단</strong>입니다. 좋은 데이터 판단은 더 많은 수치뿐 아니라 더 나은 질문, 충분한 맥락, 그리고 틀릴 수 있음을 인정하는 검증 절차를 필요로 합니다.</p>
+</section><section class="references" id="references"><h2>참고자료와 원전</h2>
+<ol>
+<li>José van Dijck (2014), <em>Datafication, dataism and dataveillance: Big Data between scientific paradigm and ideology</em>, <em>Surveillance &amp; Society</em>, 12(2), 197–208. <a href="https://doi.org/10.24908/ss.v12i2.4776" rel="noopener noreferrer" target="_blank">원문</a>.</li>
+<li>danah boyd &amp; Kate Crawford (2012), <em>Critical Questions for Big Data</em>, <em>Information, Communication &amp; Society</em>, 15(5). <a href="https://www.microsoft.com/en-us/research/publication/critical-questions-for-big-data-provocations-for-a-cultural/" rel="noopener noreferrer" target="_blank">연구 소개</a>.</li>
+<li>David Lazer, Ryan Kennedy, Gary King, Alessandro Vespignani (2014), <em>The Parable of Google Flu: Traps in Big Data Analysis</em>, <em>Science</em>, 343, 1203–1205. <a href="https://gking.harvard.edu/publication/the-parable-of-google-flu-traps-in-big-data-analysis/" rel="noopener noreferrer" target="_blank">연구 소개</a>.</li>
+<li>Ziad Obermeyer et al. (2019), <em>Dissecting racial bias in an algorithm used to manage the health of populations</em>, <em>Science</em>, 366, 447–453. <a href="https://pubmed.ncbi.nlm.nih.gov/31649194/" rel="noopener noreferrer" target="_blank">PubMed</a>.</li>
+<li>Donald T. Campbell (1976), <em>Assessing the Impact of Planned Social Change</em>, Occasional Paper Series No. 8; 2011 재수록. <a href="https://eric.ed.gov/?id=ED303512" rel="noopener noreferrer" target="_blank">원전 서지</a>.</li>
+<li>Andrew D. Selbst et al. (2019), <em>Fairness and Abstraction in Sociotechnical Systems</em>, FAT* 2019. <a href="https://doi.org/10.1145/3287560.3287598" rel="noopener noreferrer" target="_blank">DOI</a>.</li>
+<li>Timnit Gebru et al. (2021), <em>Datasheets for Datasets</em>, <em>Communications of the ACM</em>, 64(12), 86–92. <a href="https://www.microsoft.com/en-us/research/publication/datasheets-for-datasets/" rel="noopener noreferrer" target="_blank">연구 소개</a>.</li>
+<li>NIST (2023), <em>Artificial Intelligence Risk Management Framework 1.0</em>, NIST AI 100-1. <a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener noreferrer" target="_blank">공식 문서</a>.</li>
+<li>OECD (2019), <em>OECD Principles on Artificial Intelligence</em>. <a href="https://oecd.ai/en/ai-principles" rel="noopener noreferrer" target="_blank">공식 자료</a>.</li>
+<li>D. T. Campbell (1979), <em>Assessing the impact of planned social change</em>, <em>Evaluation and Program Planning</em>, 2(1), 67–90. <a href="https://doi.org/10.1016/0149-7189(79" rel="noopener noreferrer" target="_blank">저널 기록</a>90048-X). 같은 연구의 다른 출판 이력으로 중복 독립 증거로 취급하지 않습니다.</li>
+</ol>
+</section></main><footer class="foot"><div class="wrap">Re:Site · 현대사회 개념지도 · 숫자와 현실의 관계를 읽는 개념</div></footer><script id="s4-stdict-search-js" src="/assets/common/stdict-search.js?v=20260927v1" defer></script>
+</body></html>

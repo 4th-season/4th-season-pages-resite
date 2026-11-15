@@ -1,0 +1,380 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>모델 편향 — AI가 객관적으로 계산했는데 왜 결과는 불공정해질까 | Re:Site 현대사회 개념지도</title><meta name="description" content="모델 편향은 데이터·정답표·목표변수·평가방식·운영환경의 선택을 통해 AI의 예측과 판단이 특정 집단에 불리하게 나타나는 현상입니다. 얼굴 분석과 의료 알고리즘 연구로 원인, 측정, 완화의 한계를 설명합니다."><link rel="canonical" href="https://4th-season.com/model-bias"><meta property="og:type" content="article"><meta property="og:title" content="모델 편향 — AI가 객관적으로 계산했는데 왜 결과는 불공정해질까"><meta property="og:description" content="모델 편향은 데이터·정답표·목표변수·평가방식·운영환경의 선택을 통해 AI의 예측과 판단이 특정 집단에 불리하게 나타나는 현상입니다. 얼굴 분석과 의료 알고리즘 연구로 원인, 측정, 완화의 한계를 설명합니다."><meta property="og:url" content="https://4th-season.com/model-bias"><meta property="og:image" content="https://4th-season.com/assets/resite/model-bias-cover.webp"><meta property="article:published_time" content="2026-10-23T09:15:00+09:00"><meta property="article:modified_time" content="2026-10-23T09:15:00+09:00"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "모델 편향 — AI가 객관적으로 계산했는데 왜 결과는 불공정해질까", "description": "모델 편향은 데이터·정답표·목표변수·평가방식·운영환경의 선택을 통해 AI의 예측과 판단이 특정 집단에 불리하게 나타나는 현상입니다. 얼굴 분석과 의료 알고리즘 연구로 원인, 측정, 완화의 한계를 설명합니다.", "image": ["https://4th-season.com/assets/resite/model-bias-cover.webp"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://4th-season.com/model-bias"}, "datePublished": "2026-10-23T09:15:00+09:00", "dateModified": "2026-10-23T09:15:00+09:00", "inLanguage": "ko-KR"}</script><style>
+:root{--navy:#17324d;--midnight:#1f3b5b;--cobalt:#315f8c;--slate:#6e8faf;--ice:#eef4f9;--mist:#f7fafc;--ink:#1f2d3a;--line:#d8e4ee}
+*{box-sizing:border-box}body{margin:0;font:17px/1.86 system-ui,'Noto Sans KR','Malgun Gothic',sans-serif;color:var(--ink);background:#fff;word-break:keep-all}a{color:var(--cobalt)}.container{width:min(960px,calc(100% - 38px));margin:auto}.top{border-bottom:1px solid var(--line);padding:18px 0}.top .container{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-weight:850;color:var(--navy);font-size:18px}.crumb{display:flex;gap:10px;font-size:14px;flex-wrap:wrap}
+.cover{background:linear-gradient(120deg,#17324d,#1f3b5b);border-radius:22px;margin:40px 0 22px;padding:45px 48px;color:#fff}.series{font-size:13px;border:1px solid #ffffff66;padding:6px 13px;border-radius:25px;display:inline-block}.cover h1{font-size:clamp(30px,5vw,49px);line-height:1.28;letter-spacing:-.035em;margin:20px 0}.lead{color:#e1edf6;font-size:18px}.pub{font-size:14px;color:#bbd4e6;margin-top:24px}.hero{margin:0 0 30px}.hero img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line)}
+.article-nav{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 56px}.article-nav a{padding:12px 19px;background:var(--mist);border:1px solid var(--line);border-radius:12px}.section{margin:0 0 66px}.section h2,.references h2{color:var(--navy);font-size:29px;line-height:1.4;letter-spacing:-.025em;border-bottom:3px solid var(--ice);padding-bottom:14px;margin:0 0 24px}.section p{margin:18px 0}.section table{border-collapse:collapse;width:100%;font-size:15px;margin:29px 0;line-height:1.6}.section table th,.section table td{border:1px solid var(--line);text-align:left;vertical-align:top;padding:13px}.section table th{background:var(--ice);color:var(--navy)}.section table tr:nth-child(even) td{background:#fbfdff}
+.section strong{font-weight:750;color:#17324d}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:14px 0 20px}.process div{background:var(--ice);border:1px solid #d5e4f0;border-radius:13px;padding:18px 14px}.process strong,.process span{display:block}.process span{font-size:14px;line-height:1.55}.finish{background:linear-gradient(120deg,#17324d,#284a6c);border-radius:18px;color:white;padding:23px 26px;margin:32px 0}.finish span{font-size:13px;color:#c8e0f2;font-weight:800}.finish p,.finish strong{color:#fff;margin:10px 0}.references{margin:60px 0;background:var(--mist);padding:30px;border-radius:18px}.references li{padding:0 0 12px;overflow-wrap:anywhere}.foot{border-top:1px solid var(--line);color:#70869b;font-size:14px;padding:24px 0 42px}
+@media(max-width:750px){.cover{padding:29px 25px}.section h2{font-size:24px}.process{grid-template-columns:1fr 1fr}.section table{display:block;overflow-x:auto}}</style><link id="s4-article-nav-css" rel="stylesheet" href="/assets/common/article-nav.css?v=20260928v1">
+<link id="s4-stdict-search-css" rel="stylesheet" href="/assets/common/stdict-search.css?v=20260927v1">
+</head><body>
+<div id="s4-stdict-search" class="s4-dict-search" data-endpoint="/api/stdict" aria-label="표준국어대사전 검색">
+<form class="s4-dict-form" role="search" autocomplete="off">
+<span class="s4-dict-badge">사전</span>
+<label class="s4-dict-sr" for="s4-dict-input">표준국어대사전 검색어</label>
+<input id="s4-dict-input" class="s4-dict-input" type="search" inputmode="search" maxlength="80" placeholder="표준국어대사전" aria-label="표준국어대사전 검색">
+<button class="s4-dict-submit" type="submit" aria-label="사전 검색">⌕</button>
+</form>
+<div class="s4-dict-panel" hidden aria-live="polite"></div>
+</div>
+<nav id="fs-common-menu" class="fs-common-menu" data-sitejob-marker="GLOBAL_ARTICLE_NAV_V2" aria-label="개별 글 공통 메뉴"><div class="fsn-inner"><a class="fsn-exit" href="/world/resite/social-phenomena/">← 상위 지도</a><a class="fsn-brand" href="/">4TH SEASON</a><a class="fsn-domain" href="/learn/">LEARN</a><a class="fsn-domain" href="/world/">WORLD</a><a class="fsn-domain" href="/life/">LIFE</a><a class="fsn-domain insite" href="/insite/">In:Site</a><a class="fsn-series" href="/world/resite/">Re:Site</a><a class="fsn-map" href="/sitemap/">한눈에 보기</a></div></nav><!-- RESITE-RS083-MODEL-BIAS-V1-20261023-001 --><header class="top"><div class="container"><span class="brand">4번째 계절 · Re:Site</span><nav class="crumb"><a href="/world/resite/">현대사회 개념지도</a><span>›</span><a href="/world/resite/social-phenomena/">사회현상</a></nav></div></header><main class="container"><section class="cover"><span class="series">Re:Site · 위험·불확실성·데이터</span><h1>모델 편향 — AI가 객관적으로 계산했는데 왜 결과는 불공정해질까</h1><p class="lead">컴퓨터는 같은 규칙을 적용합니다. 그런데 그 규칙을 만드는 자료와 목적이 한쪽으로 기울었다면, 결과도 공정하다고 할 수 있을까요?</p><div class="pub">최초 발행 <time datetime="2026-10-23">2026.10.23</time></div></section><figure class="hero"><img src="/assets/resite/model-bias-cover.webp" alt="여러 집단에서 입력된 데이터가 AI 모델을 거쳐 서로 다른 정확도와 판단 결과로 나뉘고 분석가가 편향을 평가하는 모습" width="1200" height="675" loading="eager"></figure><nav class="article-nav"><a href="/world/resite/">현대사회 개념지도</a><a href="/world/resite/social-phenomena/">사회현상</a><a href="/simpsons-paradox">함께 읽기: 심슨의 역설</a></nav><section class="section" id="section-1"><h2>정확도 95%라는 AI가 누구에게는 계속 틀릴 수 있다</h2>
+<p>회사에 새 심사 프로그램이 들어왔습니다. 담당자는 “전체 예측 정확도 95%”라는 시험 결과를 보여 줍니다. 수작업보다 일관되고, 같은 조건이면 같은 점수를 계산하니 공정해 보입니다. 그런데 프로그램을 이용하는 일부 사람들은 설명하기 어려운 불이익을 반복해서 겪습니다. 같은 종류의 서류인데 어떤 사람에게는 보완을 여러 번 요구하고, 다른 사람에게는 쉽게 통과를 허용합니다. 높은 평균 정확도라는 숫자와 현장에서 관찰되는 불이익은 어떻게 함께 존재할 수 있을까요?</p>
+<p>첫 번째 답은 <strong>전체 평균이 집단별 경험을 숨길 수 있다</strong>는 것입니다. 인원이 많은 집단에서 성능이 높으면, 소수 집단에서 계속 틀리더라도 전체 수치는 여전히 높을 수 있습니다. 두 번째 답은 정확도 자체가 공정성과 다른 성질이라는 것입니다. 예측이 기존 기록과 잘 맞는다고 해도, 기존 기록이 과거의 불공정한 결정을 반영했다면 무엇을 잘 맞혔는지부터 되물어야 합니다. 정확도 95%는 “남은 5%의 오류가 누구에게, 어떤 피해로 나타나는가”라는 질문에 답하지 못합니다.</p>
+<p>예를 들어 자동 선발 모델이 전체 지원자의 과거 합격 기록을 거의 정확히 예측한다고 가정해 보겠습니다. 그런데 과거 합격 기준에서 어떤 경력 공백이 실제 역량과 무관하게 불리하게 처리됐다면, 모델은 그 규칙을 높은 정확도로 재현할 수 있습니다. 숫자상으로는 과거 판단을 매우 잘 모사하지만 실제로 필요한 자격을 평가하는 데에는 실패할 수 있습니다. 이 사례는 <strong>설명을 위해 구성한 가상 장면</strong>이며 특정 기업의 실제 채용 통계를 인용한 것이 아닙니다.</p>
+<p>모델 편향(Model Bias)은 이처럼 <strong>AI가 데이터를 수집하고 학습하고 평가하고 실제로 사용하는 과정에서 특정 방향으로 치우친 결과를 만드는 현상</strong>을 말합니다. 다만 통계학에서의 편향은 추정치가 참값에서 체계적으로 벗어나는 현상, 머신러닝에서의 편향은 모델의 가정이나 예측오차 특성, 사회적 논의에서의 편향은 집단에 따라 불리한 영향을 미치는 현상 등으로 쓰입니다. 세 뜻을 무턱대고 하나로 합치면 원인을 놓칩니다.</p>
+<table>
+<thead>
+<tr>
+  <th>보이는 성능 수치</th>
+  <th>그 숫자로 말할 수 있는 것</th>
+  <th>여전히 확인할 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>전체 정확도</td>
+  <td>모든 평가사례 중 맞힌 비율</td>
+  <td>적은 집단의 오류가 큰가</td>
+</tr>
+<tr>
+  <td>평균 오류율</td>
+  <td>전체 예측 실패의 평균</td>
+  <td>같은 오류가 누구에게 집중되나</td>
+</tr>
+<tr>
+  <td>집단별 정확도</td>
+  <td>집단 내 예측 성능 차이</td>
+  <td>잘못된 정답표 자체가 공정한가</td>
+</tr>
+<tr>
+  <td>높은 서비스 사용률</td>
+  <td>사람들이 시스템을 사용함</td>
+  <td>이용하지 못하거나 탈락한 사람은 누군가</td>
+</tr>
+</tbody>
+</table>
+<p>핵심은 “AI가 틀렸다”라는 포괄적인 말이 아닙니다. <strong>무엇을 학습했는가, 어느 집단을 대표했는가, 어떤 결과를 최적화했는가, 누가 손해를 보는가</strong>를 구별해야 실제 원인에 접근할 수 있습니다.</p>
+</section>
+<section class="section" id="section-2"><h2>모델 편향은 코드의 오류만이 아니라 판단 체계의 문제다</h2>
+<p>미국 국립표준기술연구소(NIST)는 2022년 특별간행물 SP 1270에서 AI 편향을 크게 세 범주로 논의했습니다. <strong>제도적(systemic)</strong> 편향은 기관의 규칙이나 관행이 어떤 집단에 유리하게 작동할 때 발생할 수 있습니다. <strong>계산·통계적(computational and statistical)</strong> 편향은 표본 선택, 측정, 모델링, 평가 방법에서 발생할 수 있습니다. <strong>인간의 인지적(human-cognitive)</strong> 편향은 문제를 정의하고 자료를 해석하고 도구를 신뢰하는 사람의 판단에서 나타날 수 있습니다. 이 세 범주는 따로 떨어져 있는 칸이 아니라 서로 영향을 주는 설명 틀입니다.</p>
+<p>취업 준비자의 ‘성과’를 예측한다면서 과거에 이미 채용된 직원만 관찰하는 상황을 생각해 봅시다. 처음부터 선발되지 않은 사람은 기록에서 빠집니다. 채용기관이 어떤 경력·학력을 높게 평가했다면 그 판단이 자료 구성에 반영됩니다. 분석 담당자가 이를 충분히 고려하지 않고 ‘과거 선발된 사람의 특징’으로 합격 확률을 설계하면, 모델 자체는 수학적으로 정상 작동해도 배제의 패턴을 되풀이할 수 있습니다.</p>
+<p>2016년 바로카스와 젤프스트(Barocas &amp; Selbst)는 빅데이터 분석이 과거 판단의 편견뿐 아니라 사회에 이미 존재하는 불평등의 패턴을 받아들일 수 있다고 지적했습니다. 데이터를 이용하면 인간의 편견을 자동으로 제거할 수 있다는 기대를 의심하게 만든 연구입니다. 중요한 것은 프로그래머가 의도적으로 차별 코드를 넣었는지 여부만이 아닙니다. 사회적 결과를 계산에 쓰기 쉬운 변수로 바꾸는 과정이 어떻게 설계됐는지를 조사해야 합니다.</p>
+<table>
+<thead>
+<tr>
+  <th>발생 위치</th>
+  <th>가능한 편향</th>
+  <th>질문해야 할 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>제도의 역사</td>
+  <td>과거 기회와 자원의 불균형</td>
+  <td>누구의 기록이 애초에 생겼는가</td>
+</tr>
+<tr>
+  <td>수집과 표본</td>
+  <td>과소대표·접근 불가·누락</td>
+  <td>어떤 사람이 훈련집합에서 빠졌는가</td>
+</tr>
+<tr>
+  <td>정답표와 측정</td>
+  <td>불완전한 대리변수</td>
+  <td>측정한 값이 정말 원하는 능력인가</td>
+</tr>
+<tr>
+  <td>목표함수와 임계값</td>
+  <td>평균 성능 최적화의 부작용</td>
+  <td>누가 더 자주 잘못 거부되는가</td>
+</tr>
+<tr>
+  <td>운영과 사용</td>
+  <td>피드백·자동화 편향</td>
+  <td>실제 사람이 모델을 어떻게 신뢰하는가</td>
+</tr>
+</tbody>
+</table>
+<p>따라서 모델 편향의 해결은 ‘편향되지 않은 알고리즘을 하나 고르면 끝’이라는 과제가 아닙니다. 문제정의와 권한, 자료수집, 검증, 책임소재가 모두 이어지는 조직의 의사결정입니다. NIST가 편향의 범위를 코드 바깥까지 넓힌 이유도 여기에 있습니다.</p>
+</section>
+<section class="section" id="section-3"><h2>데이터가 많은 것과 데이터가 대표적인 것은 다르다</h2>
+<p>모델은 관찰한 사례에서 규칙을 학습합니다. 그러나 관찰된 사례가 실제 사용 대상의 축소판이라는 보장은 없습니다. 특정 지역에만 서비스가 제공됐거나, 스마트폰 사용자가 자료를 더 많이 남겼거나, 실패 사례는 기록하지 않았다면 훈련 데이터는 처음부터 치우칠 수 있습니다. 데이터를 수백만 건 모아도 빠진 집단이 저절로 등장하지는 않습니다.</p>
+<p>이때 중요한 것은 <strong>대표성의 기준이 이용 상황에 달라진다</strong>는 점입니다. 전체 인구의 성별 비중을 그대로 맞춘 자료가 항상 최적이라는 뜻은 아닙니다. 심야 응급환자 분류 모델에서는 실제 병원을 이용하는 사람의 특성뿐 아니라 드물지만 심각한 사례를 충분히 관찰해야 합니다. 반대로 특정 학교의 학습 지원 모델을 다른 지역 학교에 적용한다면 사교육 접근, 학습환경, 언어 사용이 달라질 수 있습니다. 훈련 당시 적절했던 표본이 실제 서비스의 표본이 아닐 수 있습니다.</p>
+<p>훈련집합과 시험집합을 무작위로 나누었다는 사실만으로도 충분하지 않습니다. 두 집합이 같은 편향된 모집단에서 나왔다면 시험 점수는 높더라도 현실로 옮겼을 때 실패할 수 있습니다. 특히 시간에 따라 환경이 바뀌는 경우에는 과거의 자료 분포에서 현재의 자료 분포로 이동하는 <strong>분포 변화(distribution shift)</strong>를 검토해야 합니다. ‘검증을 통과한 모델’과 ‘오늘 이 장소에서 믿고 쓸 수 있는 모델’은 다른 주장입니다.</p>
+<p><strong>표본 편향(selection bias)</strong>은 어떤 사례가 포함될 확률의 차이에서, <strong>측정 편향(measurement bias)</strong>은 같은 현상을 집단에 따라 다른 정밀도나 방식으로 관찰하는 데서, <strong>라벨 편향(label bias)</strong>은 정답으로 지정한 판단 자체가 일관되거나 정확하지 않을 때 나타날 수 있습니다. 서로 겹치지만 해결책은 같지 않습니다. 누락된 집단을 보충해도 잘못된 정답표는 그대로 남습니다.</p>
+<table>
+<thead>
+<tr>
+  <th>데이터의 문제</th>
+  <th>겉으로 보이는 특징</th>
+  <th>점검해야 할 자료</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>표본 부족</td>
+  <td>드문 집단에서 오차 큼</td>
+  <td>집단별 표본 수와 신뢰구간</td>
+</tr>
+<tr>
+  <td>선택 편향</td>
+  <td>실제 대상에서 빠진 사람 존재</td>
+  <td>포함·제외 기준, 원래 모집단</td>
+</tr>
+<tr>
+  <td>라벨의 불일치</td>
+  <td>담당자마다 정답이 다름</td>
+  <td>표본 재판정·검토자 간 일치도</td>
+</tr>
+<tr>
+  <td>분포 변화</td>
+  <td>시간이 지나며 성능 저하</td>
+  <td>시점별 오류율·환경 변화</td>
+</tr>
+<tr>
+  <td>기록의 누락</td>
+  <td>실패·탈락의 흔적이 적음</td>
+  <td>누락 원인·사후 추적</td>
+</tr>
+</tbody>
+</table>
+<p>이런 문제를 발견하면 무조건 모든 집단의 수를 같게 만드는 조치가 정답은 아닙니다. 실제 이용 비중, 위험의 크기, 평가 목적, 오류의 종류에 맞춰 표본을 보완하고 통계적 불확실성을 드러내야 합니다. 아무 자료도 없는 집단에 높은 성능을 약속할 수는 없습니다.</p>
+</section>
+<section class="section" id="section-4"><h2>무엇을 예측하도록 시켰는지가 공정성을 바꾼다</h2>
+<p>좋은 데이터를 모았더라도 목표를 잘못 정하면 문제가 남습니다. 어떤 개념은 직접 관찰하기 어렵습니다. ‘건강 필요도’ 대신 ‘지난 의료비’를, ‘업무 역량’ 대신 ‘과거 인사평가’를, ‘학습 가능성’ 대신 ‘최근 점수’를 이용할 수 있습니다. 이런 대리변수(proxy)는 편리하지만 원래 의미와 같지 않습니다. <strong>쉽게 측정할 수 있는 값이 필요한 판단의 내용 전체를 대표한다고 믿는 순간</strong> 모델은 다른 질문에 답하게 됩니다.</p>
+<p>2019년 오버마이어(Obermeyer) 연구진은 미국 의료기관에서 추가 돌봄 대상을 찾는 데 이용된 알고리즘을 분석했습니다. 이 시스템은 의료비를 환자의 건강 필요도를 나타내는 대리 지표로 사용했습니다. 그러나 같은 건강 상태에서도 의료서비스 접근과 지출의 차이가 존재했기 때문에, 같은 위험점수를 받은 흑인 환자가 백인 환자보다 건강상태가 더 나쁜 결과가 관찰됐습니다. 연구진은 편향을 바로잡는 경우 추가 도움을 받도록 식별되는 흑인 환자 비중이 기존 <strong>17.7%에서 46.5%</strong>로 증가할 수 있다고 추정했습니다. 이는 2019년 해당 연구의 대상 알고리즘 분석에서 나온 수치이지 모든 병원과 AI에 적용되는 상수가 아닙니다.</p>
+<p>이 사례가 가르쳐 주는 것은 ‘의료비를 계산한 공식이 틀렸다’는 단순한 결론이 아닙니다. 의료비를 잘 맞히는 일이 건강상태가 나쁜 사람을 잘 찾는 일과 달랐던 것입니다. <strong>지표에 대한 예측력이 높아도 원래 해결하려던 문제에 대한 타당성은 낮을 수 있다</strong>는 점이 핵심입니다. 이런 구조는 채용, 신용, 교육, 복지에도 유사한 질문을 던지지만, 각 분야에서 동일한 형태의 편향이 발생했다는 직접 증거는 따로 확인해야 합니다.</p>
+<table>
+<thead>
+<tr>
+  <th>제도가 알고 싶은 것</th>
+  <th>쉽게 선택한 대리 지표</th>
+  <th>어긋날 수 있는 이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>환자에게 필요한 지원</td>
+  <td>과거 의료 지출</td>
+  <td>지출은 접근성과 제도의 차이도 반영</td>
+</tr>
+<tr>
+  <td>지원자의 잠재 역량</td>
+  <td>과거 합격·승진 이력</td>
+  <td>이미 선발된 사람만 학습할 가능성</td>
+</tr>
+<tr>
+  <td>학생의 이해 능력</td>
+  <td>최근 시험 점수</td>
+  <td>문제 유형·응시 조건에 영향받음</td>
+</tr>
+<tr>
+  <td>고객이 받을 도움</td>
+  <td>과거 문의 건수</td>
+  <td>문의를 포기한 사람은 보이지 않음</td>
+</tr>
+</tbody>
+</table>
+<p>표의 뒤 세 행은 여러 분야에서 가능한 문제를 보여 주는 설명용 비교이지 특정 기관에서 확인된 실증 수치가 아닙니다. 판단의 핵심을 직접 측정할 수 없다면, 대리 지표가 무엇을 빠뜨리는지 명시하고 다른 검증 수단을 함께 마련해야 합니다.</p>
+</section>
+<section class="section" id="section-5"><h2>얼굴 분석 연구는 평균 성능 뒤에 가려진 차이를 보여 줬다</h2>
+<p>2018년 조이 부올람위니와 팀닛 게브루의 <strong>Gender Shades</strong> 연구는 얼굴 이미지에서 성별을 분류하는 상용 시스템 세 개를 분석했습니다. 연구진은 피부색 표현과 성별에 따른 네 하위집단의 분류 오류를 비교했습니다. 일부 시스템에서 피부색이 어두운 여성 집단의 오류율은 <strong>최대 34.7%</strong>, 피부색이 밝은 남성 집단의 최고 오류율은 <strong>0.8%</strong>였습니다. 연구는 일부 상용 성별분류 시스템과 연구 당시 평가 자료에 관한 것이며, 모든 얼굴인식 시스템의 보편적인 오류율을 뜻하지 않습니다.</p>
+<p>연구를 읽을 때에는 <strong>성별 분류(gender classification)</strong>와 <strong>개인 식별을 위한 얼굴 인식(face recognition)</strong>을 구분해야 합니다. 두 과제는 같은 것이 아닙니다. 사진을 보고 연구에서 정의한 성별 범주로 분류한 결과를 분석했다고 해서 경찰용 얼굴 식별 시스템의 정확도를 직접 측정한 것은 아닙니다. 연구의 중요한 공헌은 널리 사용하는 평균 성능이 성별과 피부색의 교차집단에서 크게 달라질 수 있음을 보여 준 점입니다.</p>
+<p>또한 이 연구는 알고리즘뿐 아니라 평가에 널리 쓰이던 얼굴 데이터셋 자체의 구성도 문제 삼았습니다. 연구진은 그 데이터셋들이 밝은 피부색 얼굴을 크게 많이 포함하고 있음을 확인했습니다. 특정 집단이 자료에 충분히 들어오지 않으면 오류를 발견하기도 어렵고, 개발 단계에서 개선할 근거도 부족해집니다. ‘다양한 사람의 얼굴’이라는 표현 대신 표본의 구성과 실제 평가 결과를 구체적으로 써야 하는 이유입니다.</p>
+<table>
+<thead>
+<tr>
+  <th>연구에서 다룬 항목</th>
+  <th>확인 가능한 결론</th>
+  <th>이 수치로는 말할 수 없는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>상용 시스템 3개</td>
+  <td>집단별 성별 분류 성능에 큰 격차</td>
+  <td>모든 AI의 오류율이 같음</td>
+</tr>
+<tr>
+  <td>어두운 피부색 여성 집단</td>
+  <td>일부 시스템에서 오류율 최대 34.7%</td>
+  <td>이 집단이 어디서나 같은 오류를 겪음</td>
+</tr>
+<tr>
+  <td>밝은 피부색 남성 집단</td>
+  <td>일부 시스템에서 최고 오류율 0.8%</td>
+  <td>다른 분류 과제도 거의 완벽함</td>
+</tr>
+<tr>
+  <td>평가 데이터셋 구성</td>
+  <td>밝은 피부색 자료의 높은 비중</td>
+  <td>단일 원인으로 모든 격차 설명 가능</td>
+</tr>
+</tbody>
+</table>
+<p>겉으로는 전체 정확도를 잘 유지하던 도구가 사람에 따라 다른 수준의 신뢰도를 가질 수 있습니다. 따라서 개발자는 전체 정확도와 함께 충분한 표본을 가진 교차집단별 오류도 평가해야 합니다. 그러나 하위집단을 세분화할수록 표본 수가 작아질 수 있으므로, 숫자의 불확실성까지 함께 밝혀야 합니다.</p>
+</section>
+<section class="section" id="section-6"><h2>모델의 목표와 임계값은 오류를 누구에게 떠넘길지 결정한다</h2>
+<p>같은 예측모델이라도 이를 실제 결정으로 바꾸는 방식이 다르면 결과가 달라집니다. 점수가 0.49이면 거절하고 0.50이면 승인하는 <strong>임계값(threshold)</strong>을 어디에 두는지가 대표적입니다. 의학적 추가검사, 복지 서비스, 대출 심사, 사기 탐지 등에서 오류 두 종류의 비용은 같지 않습니다. 필요한 사람을 놓치는 <strong>거짓 음성(false negative)</strong>과 필요하지 않은 사람을 잘못 선정하는 <strong>거짓 양성(false positive)</strong> 중 무엇을 더 심각하게 볼 것인지 결정해야 합니다.</p>
+<p>이 선택은 순전히 컴퓨터 내부의 최적화 문제가 아닙니다. 질환이 의심되는데 검사를 권하지 않는 상황과, 질환이 없는데 추가검사를 권하는 상황은 영향을 받는 사람이 다릅니다. 수치 하나를 높이면 다른 종류의 오류가 늘어날 수 있습니다. 개발자가 “최적의 정확도”를 선택했다고 말할 때에는 <strong>누구의 위험과 어떤 손실을 최소화했는가</strong>를 물어야 합니다.</p>
+<p><strong>정확도와 공정성은 동의어가 아닙니다.</strong> 두 집단의 승인 비율을 같게 하는 방식, 실제 양성에 대한 검출률을 같게 하는 방식, 같은 점수에서 실제 사건 발생 비율을 비슷하게 만드는 방식은 서로 다른 목표입니다. 사건의 기저율이 집단마다 다르거나 예측이 완벽하지 않은 상황에서는 이 목표들을 동시에 만족시키기 어려운 경우가 있습니다. 따라서 공정성을 측정하는 기준은 사전에 해당 결정의 맥락을 고려해 정의해야 합니다.</p>
+<table>
+<thead>
+<tr>
+  <th>평가 지표</th>
+  <th>확인하는 것</th>
+  <th>놓치기 쉬운 문제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>정확도</td>
+  <td>전체 맞힌 비율</td>
+  <td>드문 사건·소수 집단 오류</td>
+</tr>
+<tr>
+  <td>재현율(민감도)</td>
+  <td>실제 양성 중 탐지한 비율</td>
+  <td>오탐과 그 비용</td>
+</tr>
+<tr>
+  <td>정밀도</td>
+  <td>양성 판정 중 실제 양성 비율</td>
+  <td>놓친 양성 사례</td>
+</tr>
+<tr>
+  <td>보정(calibration)</td>
+  <td>같은 점수의 실제 사건 발생 비율</td>
+  <td>임계값별 결과 격차</td>
+</tr>
+<tr>
+  <td>집단별 오류율</td>
+  <td>집단 사이 잘못 판정되는 차이</td>
+  <td>실제 집단 구성·표본 불확실성</td>
+</tr>
+</tbody>
+</table>
+<p>2025년 보건 분야 공정성 종설은 집단 공정성·개인 공정성·인과적 공정성이라는 서로 다른 접근을 구분했습니다. 모든 분야에서 하나의 지표를 만능 답으로 채택하기보다, 누구에게 어떤 결정을 내리는 모델인지 먼저 규정해야 합니다. 단순히 민감한 속성을 데이터에서 지우는 것으로도 공정성이 자동 보장되지 않습니다. 지역·경력·접근성 같은 다른 변수가 그 속성과 강하게 연결될 수 있기 때문입니다.</p>
+</section>
+<section class="section" id="section-7"><h2>평균의 함정은 간단한 예제로도 확인할 수 있다</h2>
+<p>아래 숫자는 실증연구의 원자료가 아니라 <strong>전체 정확도가 하위집단의 오류를 가릴 수 있음을 보여 주기 위해 새로 만든 가상 예제</strong>입니다. 어느 분류기가 집단 A의 900건 가운데 873건을 맞히고, 집단 B의 100건 가운데 77건을 맞혔다고 합시다. A의 정확도는 97%, B는 77%입니다. 전체에서는 950건을 맞혀 정확도 <strong>95%</strong>로 보입니다.</p>
+<p>문제는 전체 95%를 듣는 사람이 집단 B에 대해서도 모델이 95% 정확하다고 생각하기 쉽다는 점입니다. 그러나 실제로는 B의 100명 중 23명에게 오류가 발생했습니다. B에게 동일한 수준의 신뢰를 약속하면 오해입니다. 운영 대상에서 B의 비중이 커지면 전체 정확도도 낮아질 수 있고, 피해가 집중되던 사실이 뒤늦게 드러날 수도 있습니다.</p>
+<table>
+<thead>
+<tr>
+  <th>집단</th>
+  <th style="text-align:right">평가 건수</th>
+  <th style="text-align:right">맞힌 건수</th>
+  <th style="text-align:right">틀린 건수</th>
+  <th style="text-align:right">정확도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A</td>
+  <td style="text-align:right">900</td>
+  <td style="text-align:right">873</td>
+  <td style="text-align:right">27</td>
+  <td style="text-align:right">97%</td>
+</tr>
+<tr>
+  <td>B</td>
+  <td style="text-align:right">100</td>
+  <td style="text-align:right">77</td>
+  <td style="text-align:right">23</td>
+  <td style="text-align:right">77%</td>
+</tr>
+<tr>
+  <td>합계</td>
+  <td style="text-align:right">1,000</td>
+  <td style="text-align:right">950</td>
+  <td style="text-align:right">50</td>
+  <td style="text-align:right">95%</td>
+</tr>
+</tbody>
+</table>
+<p>물론 이 계산만으로 차별이 있었다고 확정할 수는 없습니다. 평가사례의 난이도, 표본 추출과 라벨 품질, 실제 위험의 차이, 오류의 피해 정도를 함께 분석해야 하기 때문입니다. 다만 전체 정확도를 공정성의 증거로 제시하려면 최소한 <strong>집단별 성능을 숨기지 않아야 한다</strong>는 점은 확인할 수 있습니다.</p>
+<p>이 차이는 앞선 글 &lt;a href=&quot;/simpsons-paradox&quot;&gt;「심슨의 역설」&lt;/a&gt;과도 연결됩니다. 심슨의 역설은 자료를 어떻게 묶는지에 따라 연관관계의 방향 자체가 뒤집힐 수 있음을 보여 줍니다. 여기서는 반드시 방향이 뒤집히는 경우만을 말하는 것이 아닙니다. 집단을 합산하는 것만으로 중요한 성능 차이가 보이지 않을 수 있다는 더 일반적인 주의점입니다. 두 개념의 범위를 혼동하지 않아야 합니다.</p>
+</section>
+<section class="section" id="section-8"><h2>서비스를 시작한 뒤에는 결과가 다시 데이터를 바꾸기도 한다</h2>
+<p>실험실에서 학습된 모델이 실제 현장으로 들어오면 환경이 달라집니다. 어떤 사람에게 기회가 주어지면 그 사람의 성과 기록이 추가로 생성되고, 기회가 주어지지 않은 사람에게는 비교할 기록이 남지 않을 수 있습니다. 과거에 높은 점수를 준 사람을 더 많이 관찰하면 미래의 학습 데이터도 그 사람들 위주로 모입니다. 모델은 세상을 관찰하는 도구인 동시에 세상의 기록이 어떻게 만들어지는지에 영향을 주는 도구가 됩니다.</p>
+<p>예를 들어 온라인 강좌의 추천 모델이 과거 성적이 좋았던 학습자에게만 심화 강의를 계속 보여 준다고 가정해 봅시다. 심화 과정을 접한 사람의 활동 기록은 풍부해지고, 추천받지 못한 사람은 그 강의에 도전할 기회 자체가 줄어듭니다. 이후 모델이 ‘이전에 심화 강의를 잘 수강한 사람에게 더 추천한다’는 기준으로 업데이트된다면 초기 차이가 반복될 수 있습니다. 이는 특정 교육 서비스의 사실 보고가 아니라 피드백 경로를 이해하기 위한 가상 상황입니다.</p>
+<p>이때 나타나는 현상을 모두 같은 이름으로 부르지는 않습니다. <strong>피드백 루프(feedback loop)</strong>는 모델의 판단이 이후 입력 자료와 행동을 바꾸는 연결을 말하고, <strong>분포 변화</strong>는 새 자료의 특성이 이전과 달라지는 상황을 가리킵니다. <strong>자동화 편향(automation bias)</strong>은 사람이 컴퓨터 판단을 비판적으로 검토하지 않고 지나치게 신뢰하는 문제와 관련됩니다. 세 현상은 동시에 일어날 수 있지만 분석 대상이 다릅니다.</p>
+<p>&lt;div class=&quot;process&quot; aria-label=&quot;모델 편향이 반복되는 과정&quot;&gt;&lt;div&gt;&lt;strong&gt;과거 자료&lt;/strong&gt;&lt;span&gt;제한된 사람·사건의 기록&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;모델 판단&lt;/strong&gt;&lt;span&gt;점수·추천·선정&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;기회의 배분&lt;/strong&gt;&lt;span&gt;누가 무엇을 경험하는가&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;새 기록&lt;/strong&gt;&lt;span&gt;다음 학습에 반영&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<table>
+<thead>
+<tr>
+  <th>운영에서 관찰한 징후</th>
+  <th>가능한 원인</th>
+  <th>필요한 확인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>같은 집단이 계속 낮은 점수</td>
+  <td>과거 라벨·피드백</td>
+  <td>집단별 시간 추이·독립 평가</td>
+</tr>
+<tr>
+  <td>도입 후 오류율 상승</td>
+  <td>분포 변화</td>
+  <td>새 표본과 과거 표본 비교</td>
+</tr>
+<tr>
+  <td>사람의 검토가 형식화</td>
+  <td>자동화 편향</td>
+  <td>이의제기와 재심사 기록</td>
+</tr>
+<tr>
+  <td>실패 사례가 데이터에서 실종</td>
+  <td>관찰되지 않은 결과</td>
+  <td>탈락자·비이용자 추적</td>
+</tr>
+</tbody>
+</table>
+<p>특히 결과가 불리하게 나온 사람에게 설명과 정정의 기회가 없다면 잘못된 판단이 검증되지 않은 채 누적될 수 있습니다. 따라서 운영 후 감사에서는 예측오차뿐 아니라 <strong>누가 결과를 검토하고, 누가 이의를 제기할 수 있으며, 그 결과가 다음 학습에 어떻게 반영되는가</strong>까지 살펴야 합니다.</p>
+</section>
+<section class="section" id="section-9"><h2>편향을 줄이는 일은 숫자 조정이 아니라 계속되는 검증이다</h2>
+<p>모델에 편향 위험이 발견되면 흔히 훈련자료를 더 모으거나 가중치를 다시 주는 방법부터 떠올립니다. 이런 방법이 도움이 되는 상황도 있습니다. 그러나 측정 목표가 잘못됐다면 학습량을 늘리는 것만으로 해결되지 않습니다. 실제 건강 필요도가 아니라 의료비를 계속 목표로 삼는다면 데이터가 많아져도 원래 의도한 돌봄 필요도를 찾는 문제는 남을 수 있습니다. 무엇이 문제인지에 따라 대응 순서를 달리해야 합니다.</p>
+<p>NIST의 2023년 AI 위험관리 프레임워크(AI RMF 1.0)는 <strong>거버넌스(Govern), 맥락 파악(Map), 측정(Measure), 관리(Manage)</strong>를 조직적인 위험관리 기능으로 설명합니다. 이는 도구 하나를 실행하면 공정성이 완성된다는 처방이 아닙니다. 서비스를 이용하는 사람과 영향을 받는 집단이 누구인지 밝히고, 발생 가능한 위험을 측정하고, 책임 있는 조직이 개선과 중단을 결정하는 체계를 만드는 방향입니다.</p>
+<p>실무에서는 먼저 모델의 목적과 실제 사용 환경을 문서화해야 합니다. 두 번째로 데이터 출처·포함 및 제외 기준, 목표변수와 대리 지표를 점검해야 합니다. 세 번째로 정확도·오류 종류·집단별 성능·표본 불확실성을 공개하고 재검토해야 합니다. 네 번째로 임계값을 바꾸거나 재학습했을 때 누구의 오류가 줄고 누구에게 새로운 부담이 생기는지 다시 측정해야 합니다. 마지막으로 불리한 결정을 받은 사람의 정정·이의신청 경로를 마련하고 운영 중 변화를 관찰해야 합니다.</p>
+<table>
+<thead>
+<tr>
+  <th>검증 단계</th>
+  <th>핵심 확인 자료</th>
+  <th>실패했을 때 조치 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>목적 정의</td>
+  <td>사용할 결정과 영향 대상</td>
+  <td>목적·허용 범위 재설계</td>
+</tr>
+<tr>
+  <td>데이터 감사</td>
+  <td>출처·표본·라벨·누락</td>
+  <td>수집·측정 체계 개선</td>
+</tr>
+<tr>
+  <td>모델 검증</td>
+  <td>집단별 오류·임계값·불확실성</td>
+  <td>평가기준 및 모델 재조정</td>
+</tr>
+<tr>
+  <td>운영 감사</td>
+  <td>실제 피해·변화·민원</td>
+  <td>감독 강화·재학습·사용중단</td>
+</tr>
+<tr>
+  <td>책임 확보</td>
+  <td>설명·재심사·이의제기 절차</td>
+  <td>개인의 권리구제 강화</td>
+</tr>
+</tbody>
+</table>
+<p>공정성의 기준에도 한계가 있다는 점은 인정해야 합니다. 집단별 승인 비율을 같게 하는 선택이 다른 맥락에서는 오히려 필요한 지원을 줄일 수 있습니다. 여러 기준 사이의 충돌이 있다면 기술 담당자 혼자 지표를 고르기보다 영향을 받는 사람과 담당 제도의 목적을 함께 고려해야 합니다. 2024년 공정성 측정 연구도 하나의 성능지표로 전체 판단 절차의 다양한 편향을 평가하기 어렵다고 지적했습니다.</p>
+<p>또한 <strong>편향이 완화된 모델이 곧 공정한 제도인 것은 아닙니다.</strong> NIST는 모델의 통계적 차이가 줄어들더라도 장애인의 접근성, 디지털 이용격차, 제도적 불이익은 남을 수 있다고 설명합니다. 기술적 개선을 인정하되, 그것이 해결하지 못한 조건도 같은 문장 안에서 말할 수 있어야 합니다.</p>
+<p>&lt;div class=&quot;finish&quot;&gt;&lt;span&gt;모델 편향이란&lt;/span&gt;&lt;p&gt;모델 편향은 인공지능의 데이터·목표·학습·평가·운영 방식이 특정 방향으로 치우쳐, 실제 사람과 집단에 불균형한 오류나 불이익을 낳을 수 있는 현상이다. 이때 중요한 판단은 모델이 얼마나 똑똑해 보이는가가 아니라, 누구의 현실을 학습하고 무엇을 성과로 최적화하며 잘못된 결과를 어떻게 바로잡을 수 있는가에 달려 있다.&lt;/p&gt;&lt;/div&gt;</p>
+</section><section class="references" id="references"><h2>참고자료와 연구 원전</h2><p>아래에는 개념 정의와 사례에 사용한 기관 문헌·실증연구·종설의 원문을 구분해 수록했습니다. 연구별 대상·연도·과제가 서로 다르므로 수치의 무조건적 일반화는 피해야 합니다.</p><ol><li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899" rel="noopener noreferrer">Barocas, S. &amp; Selbst, A. D. (2016). “Big Data’s Disparate Impact.” California Law Review 104, 671–732.</a></li><li><a href="https://doi.org/10.6028/NIST.SP.1270" rel="noopener noreferrer">Schwartz, R. et al. (2022). Towards a Standard for Identifying and Managing Bias in Artificial Intelligence. NIST SP 1270.</a></li><li><a href="https://doi.org/10.6028/NIST.AI.100-1" rel="noopener noreferrer">Tabassi, E. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1.</a></li><li><a href="https://proceedings.mlr.press/v81/buolamwini18a.html" rel="noopener noreferrer">Buolamwini, J. &amp; Gebru, T. (2018). “Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification.” PMLR 81, 77–91.</a></li><li><a href="https://doi.org/10.1126/science.aax2342" rel="noopener noreferrer">Obermeyer, Z. et al. (2019). “Dissecting racial bias in an algorithm used to manage the health of populations.” Science 366, 447–453.</a></li><li><a href="https://doi.org/10.1002/widm.1356" rel="noopener noreferrer">Ntoutsi, E. et al. (2020). “Bias in data-driven artificial intelligence systems—An introductory survey.” WIREs Data Mining and Knowledge Discovery.</a></li><li><a href="https://doi.org/10.1145/3641276" rel="noopener noreferrer">Lalor, J. P. et al. (2024). “Should Fairness be a Metric or a Model?” ACM Transactions on Information Systems 42(4).</a></li><li><a href="https://doi.org/10.1002/sim.70234" rel="noopener noreferrer">Gao, Z. et al. (2025). “What Is Fair? Defining Fairness in Machine Learning for Health.” Statistics in Medicine 44, e70234.</a></li><li><a href="https://doi.org/10.1111/exsy.70265" rel="noopener noreferrer">Albuquerque, C. et al. (2026). “Fairness at Risk: Where Bias Emerges in Machine Learning.” Expert Systems 43, e70265.</a></li></ol></section></main><footer class="foot"><div class="container">Re:Site · 현대사회 개념지도</div></footer><script id="s4-stdict-search-js" src="/assets/common/stdict-search.js?v=20260927v1" defer></script>
+</body></html>

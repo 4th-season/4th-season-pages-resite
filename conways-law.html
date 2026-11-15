@@ -1,0 +1,104 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>콘웨이의 법칙 — 조직의 소통 방식이 소프트웨어 구조에 남는 이유 | Re:Site</title><meta name="description" content="콘웨이의 법칙은 시스템을 설계하는 조직의 의사소통 구조가 시스템의 연결 방식에도 영향을 미친다는 관찰입니다. 1968년 원전과 실제 협업 구조, 실증연구, 역콘웨이 전략의 한계를 함께 설명합니다."><link rel="canonical" href="https://4th-season.com/conways-law"><meta property="og:type" content="article"><meta property="og:title" content="콘웨이의 법칙 — 조직의 소통 방식이 소프트웨어 구조에 남는 이유"><meta property="og:description" content="콘웨이의 법칙은 시스템을 설계하는 조직의 의사소통 구조가 시스템의 연결 방식에도 영향을 미친다는 관찰입니다. 1968년 원전과 실제 협업 구조, 실증연구, 역콘웨이 전략의 한계를 함께 설명합니다."><meta property="og:url" content="https://4th-season.com/conways-law"><meta property="og:image" content="https://4th-season.com/assets/resite/conways-law-cover.webp"><meta property="article:published_time" content="2026-10-09T18:21:00+09:00"><meta property="article:modified_time" content="2026-10-09T18:21:00+09:00"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "콘웨이의 법칙 — 조직의 소통 방식이 소프트웨어 구조에 남는 이유", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://4th-season.com/conways-law"}, "datePublished": "2026-10-09T18:21:00+09:00", "dateModified": "2026-10-09T18:21:00+09:00", "inLanguage": "ko-KR", "image": "https://4th-season.com/assets/resite/conways-law-cover.webp"}</script><link id="s4-stdict-search-css" rel="stylesheet" href="/assets/common/stdict-search.css?v=20260927v1"><style>
+:root{--navy:#17324D;--mid:#1F3B5B;--point:#315F8C;--slate:#6E8FAF;--ice:#EEF4F9;--mist:#F7FAFC;--ink:#1F2D3A;--line:#D5E1EC}
+*{box-sizing:border-box}body{margin:0;background:white;color:var(--ink);font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif;line-height:1.88;word-break:keep-all}a{color:var(--point);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(940px,calc(100% - 38px));margin:auto}
+.topbar{border-bottom:1px solid var(--line)}.topbar .wrap{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;min-height:61px}.brand{color:var(--navy);font-weight:850}.crumbs{font-size:.86rem;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.cover{border-radius:24px;background:linear-gradient(138deg,#17324D,#315F8C);padding:44px 42px;margin:38px 0 24px;color:white}.kicker{font-weight:800;font-size:.8rem;letter-spacing:.1em;color:#D4E7F6}.cover h1{font-size:clamp(1.85rem,4.7vw,3.05rem);line-height:1.25;letter-spacing:-.05em;margin:18px 0}.lead{font-size:1.13rem;color:#E8F3FB;line-height:1.76}.pubdate{font-size:.88rem;color:#D5E5F1;margin-bottom:0}
+.hero{margin:0 0 32px}.hero img{display:block;width:100%;border-radius:18px;border:1px solid var(--line)}.navbox{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:50px}.navbox a{border:1px solid var(--line);border-radius:13px;background:var(--mist);padding:9px 15px;font-size:.91rem}
+.article-section{margin:0 0 65px}.article-section h2,.references h2{color:var(--navy);font-size:1.72rem;line-height:1.4;padding-bottom:13px;border-bottom:2px solid var(--ice);margin:0 0 25px}.article-section p{margin:0 0 21px}.article-section strong{color:var(--navy);font-weight:800}
+.info,.boundary,.quote-box,.final-box{margin:27px 0;border-radius:17px;padding:23px 26px}.info{background:var(--ice);border:1px solid #D6E5F0}.boundary{background:#FFF8EB;border:1px solid #EEDDC4}.quote-box{background:var(--mist);border-left:5px solid var(--point)}.final-box{background:linear-gradient(130deg,var(--navy),var(--mid));color:#fff}.final-box strong{color:white}.eyebrow{display:block;font-size:.78rem;font-weight:800;letter-spacing:.09em;color:var(--point);margin-bottom:9px}.final-box .eyebrow{color:#C9DDEA}.small{font-size:.84rem;color:#586879}
+table{border-collapse:collapse;width:100%;margin:26px 0 33px;font-size:.94rem}th,td{text-align:left;vertical-align:top;padding:13px 13px;border:1px solid var(--line)}th{background:var(--ice);color:var(--navy);font-weight:800}tr:nth-child(even) td{background:#FBFDFE}
+.diagram{background:linear-gradient(140deg,#F7FAFC,#EEF4F9);border:1px solid #D5E4EF;border-radius:20px;padding:24px;margin:32px 0}.diagram-title{font-weight:850;color:var(--navy);margin-bottom:16px}.diagram-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.diagram-panel{border:1px solid var(--line);background:white;border-radius:15px;padding:18px}.diagram-head{font-weight:800;color:var(--navy);margin-bottom:14px}.pill-row{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}.pill-row span{background:#315F8C;color:#fff;padding:9px 11px;border-radius:10px;font-size:.86rem;font-weight:700}.pill-row.module span{background:#EEF4F9;color:#17324D;border:1px solid #CADDEA}.diagram-arrow{text-align:center;color:var(--point);font-weight:800;margin:15px 0}.diagram-panel p,.diagram-note{font-size:.82rem;color:#627182;line-height:1.6}.diagram-panel p{margin:13px 0 0}.diagram-note{margin:15px 0 0}
+.references{background:var(--mist);border-radius:18px;padding:29px;margin:65px 0}.references ul{padding-left:1.3rem}.references li{margin:10px 0}footer{border-top:1px solid var(--line);padding:26px 0 50px;color:#697885;font-size:.89rem}
+@media(max-width:720px){.cover{padding:30px 23px}.article-section h2,.references h2{font-size:1.43rem}.diagram-pair{grid-template-columns:1fr}.pill-row span{padding:7px 9px}.navbox{display:block}.navbox a{display:inline-block;margin:4px 4px 4px 0}table{display:block;overflow-x:auto}}
+</style><link id="s4-article-nav-css" rel="stylesheet" href="/assets/common/article-nav.css?v=20260928v1">
+</head><body>
+<nav id="fs-common-menu" class="fs-common-menu" data-sitejob-marker="GLOBAL_ARTICLE_NAV_V2" aria-label="개별 글 공통 메뉴"><div class="fsn-inner"><a class="fsn-exit" href="/world/resite/social-phenomena/">← 상위 지도</a><a class="fsn-brand" href="/">4TH SEASON</a><a class="fsn-domain" href="/learn/">LEARN</a><a class="fsn-domain" href="/world/">WORLD</a><a class="fsn-domain" href="/life/">LIFE</a><a class="fsn-domain insite" href="/insite/">In:Site</a><a class="fsn-series" href="/world/resite/">Re:Site</a><a class="fsn-map" href="/sitemap/">한눈에 보기</a></div></nav>
+<!-- RESITE-RS071-CONWAYS-LAW-V1-20261009 -->
+<div id="s4-stdict-search" class="s4-dict-search" data-endpoint="/api/stdict" aria-label="표준국어대사전 검색"><form class="s4-dict-form" role="search"><span class="s4-dict-badge">사전</span><input id="s4-dict-input" class="s4-dict-input" type="search" maxlength="80" placeholder="표준국어대사전"><button class="s4-dict-submit" type="submit">⌕</button></form><div class="s4-dict-panel" hidden></div></div>
+<header class="topbar"><div class="wrap"><div class="brand">4번째 계절 · Re:Site</div><nav class="crumbs"><a href="/world/resite/">현대사회 개념지도</a><span>›</span><a href="/world/resite/social-phenomena/">사회현상</a><span>›</span>노동·조직현상</nav></div></header>
+<main class="wrap"><section class="cover"><div class="kicker">RE:SITE · 사회현상 / 노동·조직현상</div><h1>콘웨이의 법칙 — 조직의 소통 방식이 소프트웨어 구조에 남는 이유</h1><p class="lead">부서와 팀이 나뉜 방식이 서비스의 화면·데이터·모듈 경계에도 남는다면, 문제는 코드만의 문제가 아닐 수 있습니다. 1968년 원전부터 오늘의 소프트웨어 조직까지 그 연결을 살펴봅니다.</p><p class="pubdate">작성일 <time datetime="2026-10-09T18:21:00+09:00">2026.10.09</time></p></section>
+<figure class="hero"><img src="/assets/resite/conways-law-cover.webp" width="1200" height="675" alt="세 협업 조직의 의사소통 경로가 같은 색의 소프트웨어 모듈 구조로 연결되는 콘웨이의 법칙 대표이미지" loading="eager"></figure>
+<nav class="navbox"><a href="/world/resite/">Re:Site 전체 지도</a><a href="/world/resite/social-phenomena/">사회현상 지도</a><a href="/brooks-law">함께 읽기 · 브룩스의 법칙</a></nav>
+
+<section class="article-section">
+<h2>같은 서비스인데 왜 부서가 나뉜 자리마다 기능이 끊길까요?</h2>
+<p>한 회사의 고객이 앱에서 물건을 주문한 뒤 배송지를 바꾸려고 합니다. 주문 화면에서는 주소를 수정할 수 있지만 결제 화면에서는 처음 주소가 남아 있습니다. 배송 부서는 이미 바뀐 정보를 확인했고 고객센터는 또 다른 화면을 봅니다. 고객에게는 하나의 주문이지만 회사 안에서는 주문, 결제, 배송, 상담이 각각 다른 업무입니다. 앱도 그 경계를 그대로 따라가는 듯합니다.</p>
+<p>이런 장면에서 개발자는 흔히 데이터베이스와 API부터 점검합니다. 주소 변경이 결제 모듈로 제대로 전달되는지, 배송시스템이 최신 데이터를 받는지 확인합니다. 그런데 기술적 연결이 끊긴 이유를 거슬러 올라가면 사람의 연결 방식이 나타날 때가 있습니다. 주문팀과 결제팀이 서로 다른 일정으로 일하고, 인터페이스 변경에는 부서 간 협의가 필요하며, 고객센터는 개발회의에서 늘 마지막에 보고를 받았던 것입니다.</p>
+<p><strong>콘웨이의 법칙(Conway’s Law)</strong>은 시스템을 만드는 조직의 <strong>실제 의사소통 구조가 그 시스템의 구조에도 반영되기 쉽다</strong>는 관찰입니다. 비슷한 업무끼리 자주 이야기하는 사람들은 같은 모듈을 만들고, 거의 소통하지 않는 집단 사이에는 별도의 연결 규칙이나 전달 단계가 생기기 쉽습니다. 설계도에 드러나는 기술적 경계 뒤에 조직의 협업 경계가 있을 수 있다는 뜻입니다.</p>
+<div class="info"><strong>핵심 개념</strong><p>콘웨이의 법칙은 <strong>“조직도가 소프트웨어 도면으로 복사된다”</strong>는 단순한 말이 아닙니다. 두 구조를 연결하는 것은 직책이나 부서 이름보다 <strong>누가 누구와 어떤 문제를 지속적으로 조정할 수 있는가</strong>입니다.</p></div>
+<p>같은 조직도를 가진 회사라도 매일 함께 문제를 해결하는 팀과 정해진 결재서류로만 소통하는 팀은 다른 시스템을 만들 수 있습니다. 반대로 한 팀이 여러 기능을 함께 책임진다면 외형상 하나의 부서 안에서도 다양한 모듈을 통합해 설계할 수 있습니다. 결국 구조를 결정하는 힘은 인사표보다 설계 과정의 대화와 조정에서 발견됩니다.</p>
+</section>
+<section class="article-section">
+<h2>1968년 멜빈 콘웨이가 본 것 — 시스템 설계는 먼저 사람을 조직하는 일이다</h2>
+<p>컴퓨터 과학자 멜빈 콘웨이(Melvin E. Conway)는 1968년 잡지 <em>Datamation</em>에 발표한 「How Do Committees Invent?」에서 복잡한 시스템의 설계 과정을 다뤘습니다. 원문의 관심은 소프트웨어에만 머물지 않았습니다. 공공정책, 대형 기술시스템, 위원회의 제안과 같이 여러 사람이 부분 과제를 나눠 수행한 뒤 하나의 결과물을 만드는 작업 전반이 대상이었습니다.</p>
+<p>그가 제시한 핵심 문제는 설계하려는 시스템이 아직 완성되지 않은 상태에서 <strong>누가 어떤 부분을 맡고 누구와 조정할지를 먼저 정해야 한다</strong>는 사실입니다. 조직을 한 번 나누면 사람들은 자기 책임 범위 안의 문제부터 깊이 다루게 됩니다. 다른 집단이 맡은 부분은 회의나 명세서와 같은 제한된 경로를 통해서만 알 수 있습니다. 설계 대안을 검토하기 전에 의사소통 경로가 일부 닫힐 수 있는 것입니다.</p>
+<p>콘웨이는 시스템을 여러 하위시스템과 그 사이의 연결로 표현했습니다. 그리고 설계조직도 여러 집단과 그 사이의 소통 경로로 표현할 수 있다고 보았습니다. 하위시스템 A와 B가 서로 정보를 주고받으려면 각각을 설계하는 집단도 연결 방식에 관해 협의해야 합니다. 그러므로 시스템의 연결 관계와 조직의 의사소통 관계 사이에는 일정한 구조적 대응이 생길 수 있습니다.</p>
+<div class="quote-box"><span class="eyebrow">1968년 원문의 요지</span><p>시스템을 설계하는 조직은 결국 자신의 <strong>의사소통 구조를 닮은 설계</strong>를 만들어내도록 제약받습니다.</p><p class="small">원문을 한국어로 풀어쓴 요약입니다. 조직도 자체와 시스템이 언제나 완전히 일치한다는 뜻은 아닙니다.</p></div>
+<p>원전에는 실제 개발팀의 구성과 컴파일러의 처리단계가 닮아간다는 풍자적인 사례도 등장합니다. 다섯 명이 맡은 COBOL 컴파일러에 다섯 단계가, 세 명이 맡은 ALGOL 컴파일러에 세 단계가 만들어졌다는 이야기입니다. 이를 모든 컴파일러에 적용할 수 있는 법칙으로 읽을 필요는 없습니다. 설계가 기술적 필요만으로 정해지는 것이 아니라 <strong>일을 나눈 단위</strong>의 영향을 받는다는 점을 선명하게 보여주는 예입니다.</p>
+<p>콘웨이의 관심은 사람을 비난하는 데 있지 않았습니다. 이미 존재하는 설계조직이 가능한 시스템의 형태를 제한한다면, 설계 결과를 바꾸려 할 때 협업 방식도 함께 봐야 한다는 문제제기였습니다. 기술의 어려움으로 보이는 현상이 사실은 의사소통 구조의 어려움일 수 있다는 관찰은 이후 소프트웨어 공학의 중요한 출발점이 됐습니다.</p>
+</section>
+<section class="article-section">
+<h2>사람 사이의 연결이 시스템의 경계가 되는 과정</h2>
+<p>제품이 사용자에게 제공해야 할 기능은 하나의 흐름으로 이어져 있어도 개발조직의 책임은 다르게 나뉠 수 있습니다. 조직이 화면·서버·데이터베이스 세 전문팀으로 나뉘어 있다면 새로운 결제 기능을 추가하려 할 때마다 세 팀의 일정과 우선순위를 맞춰야 합니다. 기능의 변경은 먼저 팀 사이의 요청으로 분해되고, 다음에는 화면 변경, 서버 API 수정, 데이터베이스 구조 변경으로 나뉩니다.</p>
+<p>반면 주문 경험 전체를 책임지는 팀에 화면·서버·데이터 담당자가 함께 있다면 같은 변경을 한 팀 안에서 조정할 수 있습니다. 이 경우 시스템도 고객의 주문 흐름을 중심으로 묶이는 방향을 선택하기 쉬워집니다. 둘 중 하나가 언제나 더 낫다는 뜻은 아닙니다. 중요한 것은 <strong>조직의 소통 경계가 기술적 결합의 위치와 변경 비용에 영향을 준다</strong>는 점입니다.</p>
+<div class="diagram" role="img" aria-label="기능별 조직과 제품흐름별 조직의 의사소통 방식이 다른 시스템 경계를 유도하는 개념도">
+ <div class="diagram-title">같은 제품을 만드는 두 가지 협업 구조</div>
+ <div class="diagram-pair"><div class="diagram-panel"><div class="diagram-head">기능별로 나뉜 조직</div><div class="pill-row"><span>화면팀</span><span>서버팀</span><span>데이터팀</span></div><div class="diagram-arrow">↓ 팀 간 명세·승인·인계 ↓</div><div class="pill-row module"><span>화면 계층</span><span>서버 계층</span><span>데이터 계층</span></div><p>하나의 사용자 요구가 여러 팀 사이의 변경으로 나뉘기 쉬움</p></div><div class="diagram-panel"><div class="diagram-head">제품 흐름을 맡은 조직</div><div class="pill-row"><span>검색팀</span><span>주문팀</span><span>배송팀</span></div><div class="diagram-arrow">↓ 흐름별 조정·책임 ↓</div><div class="pill-row module"><span>검색 모듈</span><span>주문 모듈</span><span>배송 모듈</span></div><p>제품 기능의 책임 경계가 기술 모듈의 경계와 가까워지기 쉬움</p></div></div>
+ <p class="diagram-note">개념적 비교입니다. 실제 프로젝트의 조직도와 코드 구조가 반드시 이렇게 일치한다는 뜻은 아닙니다.</p>
+</div>
+<p>가령 한 회사에서 결제팀과 주문팀 사이의 요청이 항상 문서와 회의에서만 처리된다면 두 시스템을 연결하는 데에도 공식적인 API 계약이 중요해질 수 있습니다. 문서화된 계약은 유지보수와 오류 추적에 도움이 됩니다. 그러나 고객의 작은 요구가 두 부서의 우선순위 협의로 번지면 변경 속도는 느려질 수 있습니다. 같은 경계가 안정성의 수단이면서 변화의 비용이 되는 셈입니다.</p>
+<p>반대로 한 팀이 제품 전체를 쉽게 바꿀 수 있다는 이유만으로 모든 부분을 한 덩어리로 만들면 규모가 커졌을 때 다른 문제가 생길 수 있습니다. 콘웨이의 법칙은 특정한 조직 형태를 정답으로 정하는 공식이 아닙니다. <strong>제품이 필요로 하는 조정과 조직이 실제로 허용하는 조정이 일치하는가</strong>를 살펴보게 하는 관점입니다.</p>
+</section>
+<section class="article-section">
+<h2>조직도보다 중요한 것은 실제 의사소통 경로다</h2>
+<p>조직도에는 두 부서가 같은 본부장 아래 있는 것으로 표시돼 있어도 실제로는 서로의 업무를 거의 모를 수 있습니다. 반대로 다른 나라에 흩어진 팀이라도 같은 저장소에서 코드를 검토하고 하루에도 여러 번 문제를 해결한다면 긴밀한 협업 관계가 형성될 수 있습니다. 조직의 공식 계층과 실제 대화의 네트워크는 일치하지 않을 수 있습니다.</p>
+<p>이 차이를 놓치면 콘웨이의 법칙을 지나치게 단순하게 적용하게 됩니다. “부서를 세 개 만들면 모듈도 세 개가 된다”거나 “팀을 합치면 모듈도 즉시 하나가 된다”는 설명은 너무 강합니다. 조직을 구성하는 사람들의 기술, 오래된 시스템의 제약, 공동 작업 관행, 문서와 테스트의 질, 담당자 사이의 신뢰가 함께 작용하기 때문입니다.</p>
+<p>특히 실제 소통에는 강도와 방향이 있습니다. 같은 채팅방에 있다는 것과 공동으로 중요한 설계결정을 내린다는 것은 다릅니다. 매일 상태를 공유하더라도 결정권이 다른 부서에 있으면 변경에 필요한 조정은 늦어질 수 있습니다. 반대로 정기회의 횟수가 적어도 명료한 API 계약과 신속한 협의 경로가 있다면 팀 사이의 연결은 안정적으로 유지될 수 있습니다.</p>
+<table><thead><tr><th>관찰하는 대상</th><th>표면적으로 보이는 것</th><th>실제 확인해야 할 것</th></tr></thead><tbody>
+<tr><td>조직도</td><td>같은 본부·같은 부서</td><td>변경이 필요할 때 누가 누구와 바로 결정할 수 있는가</td></tr>
+<tr><td>회의와 채팅</td><td>많은 메시지·정기회의</td><td>문제가 해결되고 책임 있는 합의로 이어지는가</td></tr>
+<tr><td>개발 책임</td><td>각자 담당 모듈이 존재</td><td>기능 하나를 바꾸는 데 몇 개의 책임 경계를 넘는가</td></tr>
+<tr><td>원격 협업</td><td>서로 다른 장소에서 일함</td><td>시차·권한·공동도구가 실제 협업을 막거나 돕는가</td></tr>
+</tbody></table>
+<p>원격근무와 디지털 협업도 법칙을 없애지 않습니다. 거리보다 정보접근권과 협업 방식이 더 중요해질 수 있다는 뜻입니다. 설계결정이 온라인에서 이뤄지더라도 누가 리뷰에 참여하고, 무엇을 확인할 권한이 있으며, 어느 팀이 문제를 함께 책임지는지는 여전히 시스템의 경계를 형성합니다.</p>
+<div class="boundary"><strong>콘웨이의 법칙을 해석할 때 주의할 점</strong><p>실제 의사소통 경로와 설계구조가 관련된다는 것이 곧 <strong>조직 구조만으로 특정 버그나 기능 실패의 원인을 확정할 수 있다</strong>는 뜻은 아닙니다. 기술적 원인과 인적·조직적 원인을 함께 살펴봐야 합니다.</p></div>
+</section>
+<section class="article-section">
+<h2>연구는 무엇을 보여줬나 — 조직의 복잡성과 소프트웨어 결함</h2>
+<p>콘웨이의 법칙은 오래된 명제로 알려져 있지만, 모든 종류의 조직에서 같은 강도로 입증된 수학적 법칙은 아닙니다. 중요한 실증연구 가운데 하나는 Microsoft Research의 Nachiappan Nagappan과 동료들이 2008년에 발표한 「The Influence of Organizational Structure on Software Quality」입니다. 연구진은 Windows Vista의 개발자료를 이용해 조직적 복잡성을 정량화하고 소프트웨어 구성요소의 결함 위험과 비교했습니다.</p>
+<p>분석에서는 조직 관련 지표들이 결함이 발생하기 쉬운 구성요소를 예측하는 데 통계적으로 유의미한 정보를 제공했습니다. 특히 일부 조직 관련 지표는 코드 수정량·복잡도·테스트 적용범위와 같은 기존 기술지표만을 이용한 접근보다 결함이 많은 바이너리를 더 잘 식별했습니다. 이는 소프트웨어의 품질을 이해할 때 코드 내부의 복잡성만 아니라 <strong>그 코드를 만든 사람들의 조직적 관계</strong>도 중요한 단서가 될 수 있음을 보여줍니다.</p>
+<p>그러나 이 결과를 “조직이 나뉘면 반드시 결함이 늘어난다”라고 읽을 수는 없습니다. 연구대상은 특정 대형 제품과 개발환경이었고, 결함 예측에서 관찰된 연관성이 모든 조직 개편의 인과효과를 증명하지는 않습니다. 조직적 복잡성과 기술적 복잡성은 서로 영향을 주고받을 수 있기 때문입니다.</p>
+<div class="info"><strong>실증연구를 통해 말할 수 있는 범위</strong><p><strong>조직적 관계에 관한 정보가 소프트웨어 품질을 이해하고 예측하는 데 도움이 된다</strong>는 근거는 있습니다. 반면 조직도를 바꾸기만 하면 설계와 품질이 정해진 방향으로 자동 개선된다는 근거로 확대해서는 안 됩니다.</p></div>
+<p>더 넓은 적용에서도 같은 주의가 필요합니다. 공공행정, 교육, 기업의 고객경험처럼 여러 부서가 하나의 문제를 나눠 다루는 조직에서는 정책이나 서비스가 행정구역처럼 분절될 수 있습니다. 하지만 그런 결과가 보일 때마다 모두 콘웨이의 법칙으로 설명한다면 책임의 법적 구조, 예산 제약, 전문직의 독립성 같은 다른 이유가 사라집니다. 법칙은 원인 탐색을 돕는 틀이지만 결과를 설명하는 유일한 원인은 아닙니다.</p>
+</section>
+<section class="article-section">
+<h2>원하는 시스템을 만들기 위해 조직을 바꾸는 일은 가능한가</h2>
+<p>콘웨이의 법칙을 받아들이는 가장 직접적인 방법은 현재 조직과 시스템 구조의 불일치를 알아차리는 것입니다. 한 기능이 세 부서를 계속 지나야 하는데 기능 자체는 빠른 실험과 변경을 요구한다면, 개발자에게만 속도를 높이라고 요구해도 성과가 제한될 수 있습니다. 조정에 필요한 시간이 제품의 변경시간을 결정하는 구조가 남아 있기 때문입니다.</p>
+<p>이 문제에 대응해 소프트웨어 설계에서는 <strong>역콘웨이 전략(Inverse Conway Maneuver)</strong>이 논의됩니다. 만들고 싶은 시스템의 경계에 맞춰 사람들의 협업과 팀 구성을 의도적으로 바꾸는 접근입니다. 예컨대 주문·배송 흐름을 비교적 독립적으로 개선하고 싶다면 여러 기술 직무가 주문·배송 책임 안에서 지속적으로 소통할 수 있도록 팀을 구성하는 방식입니다.</p>
+<p>그렇다고 팀 이름을 ‘주문팀’으로 바꾸는 것만으로 독립적인 주문시스템이 생기지는 않습니다. 기존 데이터베이스가 다른 기능과 깊게 결합돼 있거나 외부 규정이 별도 승인을 요구한다면 사람을 재배치해도 시스템의 의존성은 그대로 남을 수 있습니다. 오히려 오래된 기술 구조가 새로운 팀의 책임 범위와 충돌하면서 한동안 조정비용이 커질 수도 있습니다.</p>
+<table><thead><tr><th>상황</th><th>나타나는 조직·설계의 문제</th><th>해석할 때 중요한 점</th></tr></thead><tbody>
+<tr><td>기능별 전문팀</td><td>하나의 사용자 요구에 여러 팀의 전달이 필요</td><td>전문성 유지의 이익과 변경의 조정비용을 함께 봐야 함</td></tr>
+<tr><td>제품별 책임팀</td><td>변경속도가 높아질 수 있으나 기능 중복도 가능</td><td>독립성과 공통 표준의 균형이 필요</td></tr>
+<tr><td>기존 대형 시스템</td><td>코드와 데이터가 이미 복잡하게 얽힘</td><td>조직개편만으로 기술적 의존성이 즉시 사라지지 않음</td></tr>
+<tr><td>공통 기반 플랫폼</td><td>여러 팀이 같은 인증·데이터·인프라를 사용</td><td>분리보다 공유와 명확한 계약이 유리한 경우도 있음</td></tr>
+</tbody></table>
+<p>마틴 파울러가 설명한 역콘웨이 전략도 원하는 아키텍처를 향해 의사소통 구조를 바꾸는 방법이지, 기존 시스템을 무시하고 조직도만 바꾸라는 주장은 아닙니다. 어떤 부분은 독립시켜도 되지만 어떤 부분은 공동 표준과 일관된 거버넌스가 꼭 필요합니다. 팀의 독립성이 늘어나는 만큼 서로 다른 규칙과 데이터 해석이 생길 위험도 있습니다.</p>
+<p>따라서 조직 설계의 질문은 '몇 개 팀이 가장 적절한가'로 끝나지 않습니다. <strong>자주 함께 결정해야 하는 사람을 어떻게 연결하고, 드물게 만나도 되는 집단 사이에는 어떤 명확한 계약을 둘 것인가</strong>가 더 중요합니다. 이는 좋은 소프트웨어 구조를 설계하는 문제인 동시에 좋은 협업구조를 설계하는 문제입니다.</p>
+</section>
+<section class="article-section">
+<h2>콘웨이의 법칙은 조직을 바꾸지 않고 시스템만 바꿀 수 있는지 묻는다</h2>
+<p>시스템의 구조는 개발자가 회의실에서 그린 그림만으로 만들어지지 않습니다. 수개월 동안 반복된 대화, 변경요청이 오간 경로, 책임을 맡는 방식, 문제가 생겼을 때 누구에게 먼저 연락했는지가 조금씩 설계에 스며듭니다. 화면을 나누는 선과 데이터를 연결하는 규칙 뒤에는 사람이 일을 나눠 온 역사가 있습니다.</p>
+<p>이 때문에 완성된 시스템에서 특정 모듈 사이의 연결이 유독 복잡하다면 기술적 이유를 살펴보는 것과 함께 그 부분을 담당한 팀들이 어떻게 협업했는지도 확인할 가치가 있습니다. 자주 충돌하는 API가 실제로는 두 부서의 상충된 목표를 반영할 수 있고, 중복된 데이터베이스가 공동 결정권의 부재와 연결될 수도 있습니다. 그렇다고 모든 중복 데이터가 조직 갈등의 증거인 것은 아닙니다. 데이터 보존이나 장애 격리를 위한 의도적 설계일 수도 있습니다.</p>
+<div class="final-box"><span class="eyebrow">콘웨이의 법칙</span><p><strong>시스템의 기술적 연결은 그것을 만든 사람들의 소통 방식을 닮아가기 쉽습니다.</strong></p><p>그래서 시스템의 문제를 이해하려면 코드의 경계와 함께 사람의 협업 경계도 살펴봐야 합니다.</p></div>
+<p>콘웨이의 법칙이 지금도 유효한 이유는 특정 프로그래밍 언어나 개발방법론을 예언해서가 아닙니다. 부서 간 경계가 코드의 경계가 되는 과정을 설명하고, 사람들의 협업 방식을 바꾸지 않은 채 기술적 구조만 바꾸려는 시도가 왜 어려울 수 있는지를 짚기 때문입니다.</p>
+<p>한 조직이 원하는 것은 하나의 매끄러운 서비스인데 실제로 일하는 사람들은 여러 분리된 목표를 향해 움직이고 있다면, 그 서비스가 고객에게도 여러 조각으로 보일 가능성을 생각해야 합니다. 콘웨이의 법칙은 무조건 팀을 합치거나 쪼개라고 말하지 않습니다. <strong>좋은 설계가 필요한 곳에 필요한 소통이 실제로 존재하는가</strong>라는 질문을 남깁니다.</p>
+<p>이 점에서 브룩스의 법칙과도 구분됩니다. 브룩스가 지연된 프로젝트에 인원을 추가할 때 교육·조정비용이 왜 늘어나는지 물었다면, 콘웨이는 <strong>사람 사이의 조정 구조가 그들이 생산하는 시스템의 모양에 어떤 흔적을 남기는가</strong>를 묻습니다.</p>
+</section>
+<section class="references"><h2>참고문헌과 더 읽을 자료</h2><ul>
+<li>Melvin E. Conway, <a href="https://www.melconway.com/Home/Committees_Paper.html" target="_blank" rel="noopener noreferrer">“How Do Committees Invent?”</a>, <em>Datamation</em>, April 1968.</li>
+<li>Nachiappan Nagappan et al., <a href="https://www.microsoft.com/en-us/research/publication/the-influence-of-organizational-structure-on-software-quality-an-empirical-case-study/" target="_blank" rel="noopener noreferrer">“The Influence of Organizational Structure on Software Quality: An Empirical Case Study,”</a> Microsoft Research, 2008.</li>
+<li>Martin Fowler, <a href="https://martinfowler.com/bliki/ConwaysLaw.html" target="_blank" rel="noopener noreferrer">“Conway's Law,”</a> revised 2022.</li>
+<li>Thoughtworks, <a href="https://www.thoughtworks.com/insights/podcasts/technology-podcasts/reckoning-with-the-force-conways-law" target="_blank" rel="noopener noreferrer">“Reckoning with the force of Conway's Law,”</a> 2022.</li>
+</ul></section>
+</main><footer><div class="wrap">Re:Site · 현대사회 개념지도</div></footer><script src="/assets/common/stdict-search.js?v=20260927v1" defer></script><script id="s4-stdict-search-js" src="/assets/common/stdict-search.js?v=20260927v1" defer></script>
+</body></html>
