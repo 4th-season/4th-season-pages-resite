@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-130",
+  "slug": "contrast-effect",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/contrast-effect-cover.webp",
+  "marker": "RESITE-RS130-CONTRAST-EFFECT-20261116-001",
+  "job_id": "RESITE-RS130-CONTRAST-EFFECT-20261116-001"
+}
