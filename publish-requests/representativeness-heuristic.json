@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-131",
+  "slug": "representativeness-heuristic",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/representativeness-heuristic-cover.webp",
+  "marker": "RESITE-RS131-REPRESENTATIVENESS-HEURISTIC-20261116-001",
+  "job_id": "RESITE-RS131-REPRESENTATIVENESS-HEURISTIC-20261116-001"
+}
