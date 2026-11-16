@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-132",
+  "slug": "hot-hand-fallacy",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/hot-hand-fallacy-cover.webp",
+  "marker": "RESITE-RS132-HOT-HAND-FALLACY-20261116-001",
+  "job_id": "RESITE-RS132-HOT-HAND-FALLACY-20261116-001"
+}
