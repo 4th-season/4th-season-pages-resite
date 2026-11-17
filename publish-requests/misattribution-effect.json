@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-136",
+  "slug": "misattribution-effect",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/misattribution-effect-cover.webp",
+  "marker": "RESITE-RS136-MISATTRIBUTION-EFFECT-20261117-001",
+  "job_id": "RESITE-RS136-MISATTRIBUTION-EFFECT-20261117-001"
+}
