@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-134",
+  "slug": "survivorship-bias",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/survivorship-bias-cover.webp",
+  "marker": "RESITE-RS134-SURVIVORSHIP-BIAS-20261117-001",
+  "job_id": "RESITE-RS134-SURVIVORSHIP-BIAS-20261117-001"
+}
