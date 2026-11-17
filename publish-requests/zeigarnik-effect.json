@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-137",
+  "slug": "zeigarnik-effect",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/zeigarnik-effect-cover.webp",
+  "marker": "RESITE-RS137-ZEIGARNIK-EFFECT-20261117-001",
+  "job_id": "RESITE-RS137-ZEIGARNIK-EFFECT-20261117-001"
+}
