@@ -1,0 +1,10 @@
+{
+  "schema": "4th-season.public-article-request/v1",
+  "operation": "CONTENT_ADD",
+  "article_id": "RESITE-RS-133",
+  "slug": "hindsight-bias",
+  "parent_map": "world/resite/social-psychology",
+  "cover": "assets/resite/hindsight-bias-cover.webp",
+  "marker": "RESITE-RS133-HINDSIGHT-BIAS-20261117-001",
+  "job_id": "RESITE-RS133-HINDSIGHT-BIAS-20261117-001"
+}
